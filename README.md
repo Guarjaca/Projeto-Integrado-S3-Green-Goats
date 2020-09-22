@@ -11,4 +11,4 @@
   -Bruno Eskinazi (Guarjaca) <br>
   -Eduarda Tavares (D00dinka)</p>
 
-<a link="https://drive.google.com/drive/folders/1X0EZq0qilENbWgePb7Sr6Snv6jQ-BaZ-" target="_blank">Baixe o executável do projeto!</a>
+<a href="https://drive.google.com/drive/folders/1X0EZq0qilENbWgePb7Sr6Snv6jQ-BaZ-" target="_blank">Baixe o executável do projeto!</a>
