@@ -61,10 +61,11 @@ path_add_point(caminhoVolta, x, y, 100);
 pego =  false;
 blocoLigado = noone;
 ligado = false;
+image_speed = 0;
 
 ordem = -1;
 //Comando que a peça mandará executar
-comando = moverDIREITA;
+comando = NADA;
 
 //Variáveis para lidar com a ordenação de instruções
 </string>
@@ -285,6 +286,7 @@ draw_set_colour(c_black);
 var displayComando = " ";
 
 if(room == Room_Fase1){
+    
     switch (comando){
         case NADA:
             //draw_text(x, y, "Nada");
@@ -310,7 +312,10 @@ if(room == Room_Fase1){
             break;
         
     }
+    
 }else if(room == Room_Fase2){
+    image_index = comando;
+    /*
     switch(comando){
     case NADA:
         displayComando = "Nada";
@@ -326,9 +331,10 @@ if(room == Room_Fase1){
         break;
     default:
         break;
-    } 
+    }
+    */ 
 }
-draw_text(x + 10, y - 10, displayComando);
+//draw_text(x + 10, y - 10, displayComando);
 </string>
           </argument>
         </arguments>

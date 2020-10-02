@@ -51,11 +51,26 @@
             <string>///Parar de executar ao clicar
 
 obj_deus.executar = false;
+perder = false;
 
-with (obj_deus){
-    xAtual = xInicial;
-    yAtual = yInicial;
-
+switch(room){
+    case Room_Fase1:
+        with (obj_deus){
+            xAtual = xInicial;
+            yAtual = yInicial;
+        }
+        break;
+    case Room_Fase2:
+        with(obj_deus){
+            fermento = false;
+            farinha = false;
+            batidas = 0;
+        }    
+    
+        with(obj_visualizador){
+            sprite_index = spr_animNeutro;
+            image_speed = 0;
+        }
 }
 </string>
           </argument>

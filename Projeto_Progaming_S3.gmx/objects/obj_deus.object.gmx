@@ -77,9 +77,13 @@ listaComandos[0] = 0;
 comandoFinal = 0;
 globalvar ciclos;
 ciclos = 0;
+globalvar maxCiclos;
+maxCiclos = 0;
 
 globalvar vencer;
 vencer = false;
+globalvar perder;
+perder = false;
 
 executar = false;
 
@@ -183,6 +187,13 @@ ladoDeus.blocoPai = self;
           <argument>
             <kind>1</kind>
             <string>///Alarme de esperar
+
+if(perder == true){
+    with(obj_visualizador){
+            sprite_index = spr_animDerrota;
+            image_speed = 1;
+    }
+}
 </string>
           </argument>
         </arguments>
@@ -293,7 +304,7 @@ if(pintado == true){
 //Rodar os comandos
 if(executar == true){
     if(ciclos&lt;=0){//Parar de executar ao acabar os ciclos
-        executar = false;
+        //executar = false;
     }else{
     
         if (comandoAtual &lt; array_length_1d(listaComandos) ){
@@ -306,6 +317,8 @@ if(executar == true){
         }
     }
     
+}else{
+    ciclos = maxCiclos;
 }
 
 
@@ -377,9 +390,12 @@ if(vencer == true){
 if (room == Room_Fase2){
     draw_self();
     
+    if(perder == false &amp;&amp; vencer == false){
+    
     if(executar == true &amp;&amp; alarm[0] &lt;= 0){//============
         if(ciclos &lt;= 0){
-            executar = false;
+            obj_visualizador.sprite_index = spr_animNeutro;
+            //executar = false;
         }else{//======
             if(comandoAtual &lt; array_length_1d(listaComandos)){
                 scr_executarFase2(listaComandos, comandoAtual);
@@ -389,8 +405,39 @@ if (room == Room_Fase2){
                 ciclos--;
             }//=======
         }               
-    }//=================================
+    }else if (executar == false){//=================================
+        ciclos = maxCiclos;
+    }
     
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Desenhar os ciclos
+
+if(room == Room_Fase2){
+    with(obj_visualizador){
+        
+        draw_text(x + 10, y + 10, "Ciclos:" + string(maxCiclos - ciclos));
+    }
 }
 </string>
           </argument>

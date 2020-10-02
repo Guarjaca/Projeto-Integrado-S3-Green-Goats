@@ -47,7 +47,13 @@
       <sprite>sprites\spr_colisor</sprite>
       <sprite>sprites\spr_BotaoConcluir</sprite>
       <sprite>sprites\spr_Concluir</sprite>
-      <sprite>sprites\spr_animMexe</sprite>
+      <sprites name="Animações">
+        <sprite>sprites\spr_animMexe</sprite>
+        <sprite>sprites\spr_animNeutro</sprite>
+        <sprite>sprites\spr_animFermento</sprite>
+        <sprite>sprites\spr_animVitoria</sprite>
+        <sprite>sprites\spr_animDerrota</sprite>
+      </sprites>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -92,6 +98,7 @@
       <object>objects\obj_deus</object>
       <object>objects\obj_botaoParar</object>
       <object>objects\obj_botaoExe</object>
+      <object>objects\obj_visualizador</object>
       <object>objects\obj_mouse</object>
     </objects>
     <objects name="Opções">
@@ -112,7 +119,6 @@
       <object>objects\obj_telaVisualizacao</object>
       <object>objects\obj_areaProibida</object>
     </objects>
-    <object>objects\obj_visualizador</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\Room_MenuPrincipal</room>

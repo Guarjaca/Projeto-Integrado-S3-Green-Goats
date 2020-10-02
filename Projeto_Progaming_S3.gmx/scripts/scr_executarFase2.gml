@@ -15,7 +15,16 @@ switch(arrayComandos[posicao]){
         alarm[0] = obj_visualizador.image_number;
         break;
     case FERMENTO:
-        fermento = true;
+        if(fermento == false){
+            fermento = true;
+        }else{
+            perder = true;
+        }
+        with(obj_visualizador){
+            sprite_index = spr_animFermento;
+            image_speed = 1;
+        }
+        alarm[0] = obj_visualizador.image_number;
         break;
     case FARINHA:
         farinha = true;

@@ -144,8 +144,8 @@ if(pego == true){
 }
 
 if (ligado == true){//Dar snap para as posições do bloco que está ligado
-    x = blocoLigado.x;
-    y = blocoLigado.y;
+    x = blocoLigado.x + 35;
+    y = blocoLigado.y + 21;
 }
 
 </string>
@@ -254,6 +254,8 @@ pego = false;
 
 draw_self();
 draw_set_colour(c_black);
+
+
 draw_text(x, y, string(comandoCiclos));
 </string>
           </argument>
