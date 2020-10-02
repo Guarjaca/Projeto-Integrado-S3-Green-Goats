@@ -74,6 +74,7 @@ globalvar comandoAtual;
 comandoAtual = 0;
 globalvar listaComandos;
 listaComandos[0] = 0;
+comandoFinal = 0;
 globalvar ciclos;
 ciclos = 0;
 
@@ -117,7 +118,19 @@ moverBAIXO =  4;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Criar botões de Execução e Parada
+            <string>///Variáveis para a Fase 2
+batidas = 0;
+fermento = false;
+farinha = false;
+
+globalvar BATER_MASSA;
+BATER_MASSA = 1;
+globalvar FERMENTO;
+FERMENTO = 2;
+globalvar FARINHA;
+FARINHA = 3;
+
+
 </string>
           </argument>
         </arguments>
@@ -147,6 +160,29 @@ with (ladoDeus){
 }
 
 ladoDeus.blocoPai = self;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Alarme de esperar
 </string>
           </argument>
         </arguments>
@@ -221,7 +257,9 @@ yAtual = yInicial;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Desenhar o circulo
+            <string>///Fase 1 - Desenhar o circulo
+
+if(room == Room_Fase1){
 
 draw_self();
 draw_set_colour(corCirculoAtual);
@@ -234,6 +272,20 @@ if(pintado == false){
 if(vencer == false){
     draw_set_colour(c_yellow);
     draw_circle(xVencer, yVencer, 5, false);
+}
+
+//================================
+
+//Mudar a cor do círculo
+if (xAtual == xPintado &amp;&amp; yAtual == yPintado){
+    pintado = true;
+    corCirculoAtual = corPintado;
+}
+
+if(pintado == true){
+    if (xAtual == xVencer &amp;&amp; yAtual == yVencer){
+        vencer = true;
+    }
 }
 
 
@@ -255,23 +307,14 @@ if(executar == true){
     }
     
 }
-//================================
 
-//Mudar a cor do círculo
-if (xAtual == xPintado &amp;&amp; yAtual == yPintado){
-    pintado = true;
-    corCirculoAtual = corPintado;
-}
-
-if(pintado == true){
-    if (xAtual == xVencer &amp;&amp; yAtual == yVencer){
-        vencer = true;
-    }
-}
 
 
 //show_debug_message("obj_Deus comandoAtual: " + string(xAtual));
 //show_debug_message("obj_Deus xAtual: " + string(xAtual));
+
+
+}
 </string>
           </argument>
         </arguments>
@@ -307,6 +350,46 @@ y1 = room_height/2 - altura/2;
 
 if(vencer == true){
     draw_rectangle(x1, y1, x1 + largura, y1 + altura, false);
+    
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Execução da fase 2
+
+if (room == Room_Fase2){
+    draw_self();
+    
+    if(executar == true &amp;&amp; alarm[0] &lt;= 0){//============
+        if(ciclos &lt;= 0){
+            executar = false;
+        }else{//======
+            if(comandoAtual &lt; array_length_1d(listaComandos)){
+                scr_executarFase2(listaComandos, comandoAtual);
+                comandoAtual++;
+            }else{      
+                comandoAtual = 0;
+                ciclos--;
+            }//=======
+        }               
+    }//=================================
     
 }
 </string>

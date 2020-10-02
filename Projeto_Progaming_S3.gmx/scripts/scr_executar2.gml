@@ -3,7 +3,7 @@
 arrayComandos = argument0;
 posicao = argument1;
 
-switch (arrayComandos[posicao].comandoConector){
+switch (arrayComandos[posicao]){
     case NADA:
         break;
     case moverDIREITA:

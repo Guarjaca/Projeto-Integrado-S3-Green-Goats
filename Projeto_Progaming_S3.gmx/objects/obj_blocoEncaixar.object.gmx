@@ -62,6 +62,7 @@ pego =  false;
 blocoLigado = noone;
 ligado = false;
 
+ordem = -1;
 //Comando que a peça mandará executar
 comando = moverDIREITA;
 
@@ -119,9 +120,11 @@ if(pego == true){//Se foi pego pelomouse
 }else{
     if(blocoLigado != noone){//Está ligado a alguém
         ligado = true;
+        ordem = blocoLigado.ordem;
     }else{
         ligado = false;
-    
+        ordem = -1;
+        
     //====================================================================
     //Retornar a posição inicial -- Se ele tiver aqui ele volta
         if (place_meeting(x, y, obj_areaProibida) == true){
@@ -279,34 +282,52 @@ if(voltando == false){
 draw_self();
 draw_set_colour(c_black);
 
-var displayComando;
+var displayComando = " ";
 
-switch (comando){
+if(room == Room_Fase1){
+    switch (comando){
+        case NADA:
+            //draw_text(x, y, "Nada");
+            displayComando = "Nada";
+            break;
+        case moverDIREITA:
+            //draw_text(x, y, "-&gt;");
+            displayComando = "--&gt;";
+            break;
+        case moverESQUERDA:
+            //draw_text(x, y, "&lt;-");
+            displayComando = "&lt;--";
+            break;
+        case moverCIMA:
+            //draw_text(x, y, "^#I");
+            displayComando = "^#I";
+            break;
+        case moverBAIXO:
+            //draw_text(x, y, "I#V");
+            displayComando = "I#V";
+            break;  
+        default:
+            break;
+        
+    }
+}else if(room == Room_Fase2){
+    switch(comando){
     case NADA:
-        //draw_text(x, y, "Nada");
         displayComando = "Nada";
         break;
-    case moverDIREITA:
-        //draw_text(x, y, "-&gt;");
-        displayComando = "--&gt;";
+    case BATER_MASSA:
+        displayComando = "Bater";
         break;
-    case moverESQUERDA:
-        //draw_text(x, y, "&lt;-");
-        displayComando = "&lt;--";
+    case FERMENTO:
+        displayComando = "Fermento";
         break;
-    case moverCIMA:
-        //draw_text(x, y, "^#I");
-        displayComando = "^#I";
+    case FARINHA:
+        displayComando = "Farinha";
         break;
-    case moverBAIXO:
-        //draw_text(x, y, "I#V");
-        displayComando = "I#V";
-        break;  
     default:
         break;
-    
+    } 
 }
-
 draw_text(x + 10, y - 10, displayComando);
 </string>
           </argument>

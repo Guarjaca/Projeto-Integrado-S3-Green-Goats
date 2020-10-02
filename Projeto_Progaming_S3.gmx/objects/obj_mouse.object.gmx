@@ -82,7 +82,7 @@ if(mousePegou == true){
 if(click == true){//Segurando o mouse
     if(justClicked == true){//Começou a segurar agora
         if(blocoPego != noone){//Se pegou alguém
-            if(position_meeting(x, y, obj_blocoEncaixar)){
+            if(position_meeting(x, y, obj_blocoEncaixar) &amp;&amp; (blocoPego.ordem == -1 || blocoPego.ordem == obj_deus.comandoFinal)){
                 blocoPego.pego = true;
             }else if(position_meeting(x, y, obj_blocoEncaixarFor)){
                 blocoPego.pego = true;

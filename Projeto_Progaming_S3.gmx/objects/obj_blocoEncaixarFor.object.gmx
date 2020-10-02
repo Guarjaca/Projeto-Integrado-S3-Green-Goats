@@ -93,14 +93,17 @@ path_add_point(caminhoVolta, x, y, 100);
 click = mouse_check_button(mb_left)
 justClicked = mouse_check_button_pressed(mb_left);
 
-if (voltando == false){
+//===================================
+//Identificar a quem vai conectar
+if (voltando == false &amp;&amp; obj_bloco.alocado == true){
     if (place_meeting(x, y, obj_lado)){
         blocoLigado = instance_place(x, y, obj_lado).blocoPai;
     }else{
         blocoLigado = noone
     }
 }
-
+//===================================
+//Realizar o movimento
 if(pego == true){
     x = mouse_x - 16;
     y = mouse_y;
@@ -113,11 +116,12 @@ if(pego == true){
     }
 
 }else {
+    //Realizar a ligação
     if(blocoLigado != noone){
         ligado = true;
-    }else{
+    }else{//Desligar o bloco
         ligado = false;
-        
+        //Fazer o caminho de volta
         if (place_meeting(x, y, obj_areaProibida) == true){
             if(voltando == false){
                 path_start(caminhoVolta, 100, path_action_stop, true);

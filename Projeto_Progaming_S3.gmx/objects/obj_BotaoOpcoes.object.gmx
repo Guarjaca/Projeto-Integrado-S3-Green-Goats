@@ -83,7 +83,7 @@ else{
             <kind>1</kind>
             <string>///Abrir o menu
 
-if (instance_exists(obj_MenuOpcoes)){
+if (instance_exists(obj_MenuOpcoes)==false){
     instance_create(0,0,obj_MenuOpcoes);
     instance_create(340,300,obj_Opcao1);
     instance_create(340,365,obj_Opcao2);
