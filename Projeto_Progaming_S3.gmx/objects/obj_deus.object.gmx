@@ -72,6 +72,8 @@ yVencer = 325;
 
 globalvar comandoAtual;
 comandoAtual = 0;
+subComando = 0;
+dentroIf = false;
 globalvar listaComandos;
 listaComandos[0] = 0;
 comandoFinal = 0;
@@ -399,7 +401,12 @@ if (room == Room_Fase2){
         }else{//======
             if(comandoAtual &lt; array_length_1d(listaComandos)){
                 scr_executarFase2(listaComandos, comandoAtual);
-                comandoAtual++;
+                if(dentroIf == false){  
+                    subComando = 0;  
+                    comandoAtual += 1;
+                }else{
+                    subComando += 1;
+                }
             }else{      
                 comandoAtual = 0;
                 ciclos--;

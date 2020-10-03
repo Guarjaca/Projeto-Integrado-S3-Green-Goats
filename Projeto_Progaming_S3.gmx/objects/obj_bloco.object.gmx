@@ -124,7 +124,7 @@ path_add_point(caminhoVolta, x, y, 100);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Cuidar da criação dos conectores
+            <string>///Cuidar da criação e destruição dos conectores
 
 if(qntdConectores &gt; 0){
     if (listaConectores[qntdConectores - 1].conectado == true){//Se o último conector se conectar com alguém
@@ -355,7 +355,7 @@ show_debug_message("obj_bloco: pego está: " + string(pego));
 draw_self();
 
 if (qntdConectores &gt; 0){
-    draw_sprite(spr_barraFinal, 0, listaConectores[qntdConectores - 1].x, listaConectores[qntdConectores - 1].y + 40);
+    draw_sprite(spr_barraFinal, 0, listaConectores[qntdConectores - 1].x - 25, listaConectores[qntdConectores - 1].y + sprite_get_height(spr_conector)/2);
 }
 </string>
           </argument>
