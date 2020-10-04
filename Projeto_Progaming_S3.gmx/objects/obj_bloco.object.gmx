@@ -58,8 +58,13 @@ ladoDireito.blocoPai = self;
 //globalvar listaConectores;
 globalvar qntdConectores;
 //listaConectores[0] = instance_create(x - 32, y + 32 + 40, obj_conector);
-listaConectores = array_create(0);
+listaConectores = array_create(1);
 qntdConectores = 0;
+
+
+
+x0Conectores = x - 46 + 25;
+y0Conectores = y + 37 + sprite_get_height(spr_conector)/2;
     
 //listaConectores[0].ordem = 0;
     
@@ -141,7 +146,9 @@ if(qntdConectores &gt; 0){
     
 }else{
     if (alocado == true){
-        listaConectores[qntdConectores] = instance_create(x - 46 + 25, y + 37 + sprite_get_height(spr_conector)/2, obj_conector);
+        x0Conectores = x - 46 + 25;
+    y0Conectores = y + 37 + sprite_get_height(spr_conector)/2;
+        listaConectores[qntdConectores] = instance_create(x0Conectores, y0Conectores, obj_conector);
         listaConectores[qntdConectores].ordem = qntdConectores;
         qntdConectores += 1;
     }
@@ -321,13 +328,13 @@ if (pego == true){
 }
 //=========================
 //Seção ao estar alocado
-if (alocado == true){
+if  (alocado == true){
     x = blocoLigado.x + 32 + 22;
     y = blocoLigado.y + 40 + 24;
 } 
 
 
-show_debug_message("obj_bloco: pego está: " + string(pego));
+//show_debug_message("obj_bloco: pego está: " + string(pego));
 </string>
           </argument>
         </arguments>
@@ -357,6 +364,35 @@ draw_self();
 if (qntdConectores &gt; 0){
     draw_sprite(spr_barraFinal, 0, listaConectores[qntdConectores - 1].x - 25, listaConectores[qntdConectores - 1].y + sprite_get_height(spr_conector)/2);
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Calcular quantos extensores tem para calcular a posição dos conectores
+
+totExtensores = 0;
+if(alocado == true){
+    for(i = 0; i &lt; qntdConectores; i++){
+        totExtensores += listaConectores[i].qntdExtensores;
+    }
+}
+show_debug_message("obj_bloco: totExtensores==" + string(totExtensores));
 </string>
           </argument>
         </arguments>

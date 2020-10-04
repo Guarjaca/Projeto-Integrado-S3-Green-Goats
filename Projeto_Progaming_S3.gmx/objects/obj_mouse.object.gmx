@@ -62,15 +62,19 @@ justClicked = mouse_check_button_pressed(mb_left);
 //Checar qual objeto está dando hover
 if(mousePegou == false){
 
-if(place_meeting(x, y, obj_blocoEncaixar)){
-    blocoPego = instance_place(x, y, obj_blocoEncaixar);
-}else if(place_meeting(x, y, obj_blocoEncaixarFor)){
-    blocoPego = instance_place(x, y, obj_blocoEncaixarFor);
-}else if(place_meeting(x, y, obj_bloco)){
-    blocoPego = instance_place(x, y, obj_bloco);
-    //show_debug_message("obj_mouse: olha o bloco");
-}else {
-    blocoPego = noone;
+    if(place_meeting(x, y, obj_blocoEncaixar)){
+        blocoPego = instance_place(x, y, obj_blocoEncaixar);
+    }else if(place_meeting(x, y, obj_blocoEncaixarFor)){
+        blocoPego = instance_place(x, y, obj_blocoEncaixarFor);
+    }else if(place_meeting(x, y, obj_bloco)){
+        blocoPego = instance_place(x, y, obj_bloco);
+        //show_debug_message("obj_mouse: olha o bloco");
+    }else if(place_meeting(x, y, obj_blocoEncaixarSe)){
+        blocoPego = instance_place(x, y, obj_blocoEncaixarSe);
+    }else if(place_meeting(x, y, obj_blocoSe)){
+        blocoPego = instance_place(x, y, obj_blocoSe);   
+    }else {
+        blocoPego = noone;
 }
 
 }
@@ -83,7 +87,7 @@ if(mousePegou == true){
     
 if(click == true){//Segurando o mouse
     if(justClicked == true){//Começou a segurar agora
-        if(blocoPego != noone){//Se pegou alguém
+        if(blocoPego != noone &amp;&amp; mousePegou == false){//Se pegou alguém
             /*
             blocoPego.pego = true;
             mousePegou = true;
@@ -97,14 +101,20 @@ if(click == true){//Segurando o mouse
             }else if(position_meeting(x, y, obj_bloco)){
                 blocoPego.pego = true;
                 mousePegou = true;
+            }else if(position_meeting(x, y, obj_blocoEncaixarSe)){
+                blocoPego.pego = true;
+                mousePegou = true;
+            }else if (position_meeting(x, y, obj_blocoSe)){
+                blocoPego.pego = true;
+                mousePegou = true;
             }
-            
         }   
     }  
 }else{
-    mousePegou = false;
+    
     if(blocoPego != noone){
         blocoPego.pego = false;
+        mousePegou = false;
     }
 }
 </string>

@@ -135,6 +135,8 @@ globalvar FERMENTO;
 FERMENTO = 2;
 globalvar FARINHA;
 FARINHA = 3;
+globalvar SE;
+SE = 4;
 
 
 </string>

@@ -52,20 +52,22 @@
   </views>
   <instances>
     <instance objName="obj_deus" x="288" y="128" name="inst_77EAEBBE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_bloco" x="128" y="160" name="inst_99D99E2B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_blocoEncaixarFor" x="96" y="224" name="inst_1DC7D336" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_blocoEncaixarFor" x="64" y="256" name="inst_FEEA3351" locked="0" code="comandoCiclos = 20;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bloco" x="82" y="145" name="inst_99D99E2B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_blocoEncaixarFor" x="56" y="212" name="inst_1DC7D336" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_blocoEncaixarFor" x="38" y="253" name="inst_FEEA3351" locked="0" code="comandoCiclos = 20;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_visualizador" x="754" y="98" name="inst_405C3100" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_botaoParar" x="891" y="545" name="inst_B06CA26C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_botaoExe" x="755" y="545" name="inst_94ED24BB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_blocoEncaixar" x="30" y="312" name="inst_74B457F9" locked="0" code="comando = BATER_MASSA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_blocoEncaixar" x="36" y="375" name="inst_C4F08487" locked="0" code="comando = BATER_MASSA;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_blocoEncaixar" x="36" y="433" name="inst_0404BFDF" locked="0" code="comando = FERMENTO;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_blocoEncaixar" x="37" y="487" name="inst_3012027F" locked="0" code="comando = FARINHA;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_blocoEncaixar" x="34" y="559" name="inst_EB458B57" locked="0" code="comando = BATER_MASSA;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_blocoEncaixar" x="27" y="293" name="inst_74B457F9" locked="0" code="comando = BATER_MASSA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_blocoEncaixar" x="33" y="347" name="inst_C4F08487" locked="0" code="comando = BATER_MASSA;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_blocoEncaixar" x="33" y="405" name="inst_0404BFDF" locked="0" code="comando = FERMENTO;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_blocoEncaixar" x="30" y="451" name="inst_3012027F" locked="0" code="comando = FARINHA;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_blocoEncaixar" x="35" y="494" name="inst_EB458B57" locked="0" code="comando = BATER_MASSA;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_mouse" x="67" y="131" name="inst_DCBCBD50" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_BotaoOpcoes" x="1183" y="3" name="inst_F15B2927" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ativaObjetivos" x="922" y="691" name="inst_802EE797" locked="0" code="" scaleX="-10.5600004196167" scaleY="1.78125" colour="4294967295" rotation="0"/>
+    <instance objName="obj_blocoSe" x="117" y="578" name="inst_6B4FA710" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_blocoEncaixarSe" x="30" y="536" name="inst_677A6FCD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

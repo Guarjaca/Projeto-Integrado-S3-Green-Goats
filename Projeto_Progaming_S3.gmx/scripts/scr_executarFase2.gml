@@ -29,6 +29,8 @@ switch(arrayComandos[posicao]){
     case FARINHA:
         farinha = true;
         break;
+    case SE:
+        break;
     default:
         break;
         
