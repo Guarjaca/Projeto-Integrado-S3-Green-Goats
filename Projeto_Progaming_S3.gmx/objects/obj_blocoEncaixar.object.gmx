@@ -95,8 +95,8 @@ comando = NADA;
 click = mouse_check_button(mb_left);
 justClicked = mouse_check_button_pressed(mb_left);
 
-if (voltando == false){
-    if (place_meeting(x, y, obj_lado2)){//Se está perto do conector -&gt; Ligue-se a ele
+if (voltando == false &amp;&amp; ligado == false){
+    if (place_meeting(x, y, obj_lado2) &amp;&amp; instance_place(x, y, obj_lado2).blocoPai.conectado == false){//Se está perto do conector -&gt; Ligue-se a ele
         blocoLigado = instance_place(x, y, obj_lado2).blocoPai;
     }else{
         blocoLigado = noone;

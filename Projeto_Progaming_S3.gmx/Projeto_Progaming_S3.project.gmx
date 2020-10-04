@@ -19,7 +19,9 @@
       <sprite>sprites\spr_conectorExt</sprite>
       <sprite>sprites\spr_ladoIf</sprite>
       <sprite>sprites\spr_if</sprite>
+      <sprite>sprites\spr_barrafFinalSe</sprite>
       <sprite>sprites\spr_ifConector</sprite>
+      <sprite>sprites\spr_blocoEncaixarSe</sprite>
     </sprites>
     <sprites name="Menu Principal">
       <sprite>sprites\spr_MenuBotao_1</sprite>
@@ -59,7 +61,6 @@
       <sprite>sprites\spr_deus</sprite>
       <sprite>sprites\spr_bolinha</sprite>
     </sprites>
-    <sprite>sprites\spr_blocoEncaixarSe</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\Tela_Menu_Principal</background>
