@@ -2,7 +2,7 @@
 <object>
   <spriteName>spr_ladoIf</spriteName>
   <solid>0</solid>
-  <visible>0</visible>
+  <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
@@ -52,7 +52,7 @@ blocoPai = noone;
             <kind>1</kind>
             <string>///Seguir o blocoPai
 
-x = blocoPai.x + 10;
+x = blocoPai.x + 88;
 y = blocoPai.y;
 </string>
           </argument>

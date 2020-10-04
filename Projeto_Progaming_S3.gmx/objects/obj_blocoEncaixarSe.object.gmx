@@ -146,8 +146,36 @@ if(pego == true){
 }
 
 if (ligado == true){//Dar snap para as posições do bloco que está ligado
-    x = blocoLigado.x + 28;
-    y = blocoLigado.y + 17;
+    x = blocoLigado.x + 88;
+    y = blocoLigado.y;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Passar o que tem para quem está ligado
+
+comando = ciclos == floor(maxCiclos/2);//Seta o comando para verificar se está na metade dos ciclos
+
+if(ligado == true){
+    blocoLigado.conectado = true;
+    blocoLigado.comandoSe = comando;
 }
 </string>
           </argument>

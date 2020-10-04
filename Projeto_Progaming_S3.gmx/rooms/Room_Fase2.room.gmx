@@ -66,8 +66,8 @@
     <instance objName="obj_mouse" x="67" y="131" name="inst_DCBCBD50" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_BotaoOpcoes" x="1183" y="3" name="inst_F15B2927" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ativaObjetivos" x="922" y="691" name="inst_802EE797" locked="0" code="" scaleX="-10.5600004196167" scaleY="1.78125" colour="4294967295" rotation="0"/>
-    <instance objName="obj_blocoSe" x="117" y="578" name="inst_6B4FA710" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_blocoEncaixarSe" x="30" y="536" name="inst_677A6FCD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_blocoSe" x="77" y="595" name="inst_6B4FA710" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_blocoEncaixarSe" x="30" y="536" name="inst_677A6FCD" locked="0" code="comando = METADE_CICLOS;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

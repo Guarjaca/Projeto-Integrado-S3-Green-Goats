@@ -137,6 +137,8 @@ globalvar FARINHA;
 FARINHA = 3;
 globalvar SE;
 SE = 4;
+globalvar METADE_CICLOS;
+METADE_CICLOS = ciclos == floor(maxCiclos/2);
 
 
 </string>
@@ -191,6 +193,8 @@ ladoDeus.blocoPai = self;
           <argument>
             <kind>1</kind>
             <string>///Alarme de esperar
+
+//obj_visualizador.image_speed = 0;
 
 if(perder == true){
     with(obj_visualizador){
@@ -407,7 +411,22 @@ if (room == Room_Fase2){
                     subComando = 0;  
                     comandoAtual += 1;
                 }else{
-                    subComando += 1;
+                    //Vê em qual conector a peça Se está
+                    linhaSe = obj_bloco.listaConectores[comandoAtual].objConectado;
+                    //Criar a lista de subcomandos para executar
+                    //listaSubComandos = array_create(linhaSe.qntdSubConectores);
+                    for(i=0; i&lt;linhaSe.qntdSubConectores; i++){
+                        listaSubComandos[i] = linhaSe.listaSubConectores[i].comandoConector;
+                    }
+                    show_debug_message("obj_deus: " + string(listaSubComandos));
+                    //Se ainda não executou todos os subcomandos
+                    if (subComando &lt; linhaSe.qntdSubConectores){
+                        scr_executarFase2(listaSubComandos, subComando);
+                        subComando += 1;
+                    }else{
+                        dentroIf = false;
+                        comandoAtual += 1;
+                    }
                 }
             }else{      
                 comandoAtual = 0;

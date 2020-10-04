@@ -55,6 +55,7 @@ ladoDireito.blocoPai = self;
             <string>///Sub-conectores
 
 comando = SE;
+comandoSe = false;
 
 listaSubConectores = array_create(0);
 qntdSubConectores = 0;
