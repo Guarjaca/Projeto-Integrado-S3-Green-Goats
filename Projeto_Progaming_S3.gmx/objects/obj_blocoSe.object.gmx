@@ -249,6 +249,9 @@ if (alocado == true){
     blocoLigado.conectado = true;
     blocoLigado.comandoConector = comando;
     blocoLigado.objConectado = self;
+    if(vencer == true){
+        depth = -6;
+    }
     
 }
 

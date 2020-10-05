@@ -185,6 +185,9 @@ if (ligado == true){
     //show_debug_message("obj_blocoEncaixar diz: eu passei pelo if: " + string(blocoLigado.blocoPai.ordemConector) )
     //show_debug_message("obj_blocoEncaixar diz: " + string(blocoLigado.blocoPai.comandoConector));
     //show_debug_message("obj_blocoEncaixarFor diz: estou ligado" );
+    if (vencer == true){
+        depth = -6;
+    }
 }
 
 

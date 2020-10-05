@@ -80,9 +80,11 @@
     <script>scripts\scr_executar.gml</script>
     <script>scripts\scr_executarFase2.gml</script>
     <script>scripts\scr_executar2.gml</script>
+    <script>scripts\scr_escreveConc.gml</script>
     <script>scripts\src_desenharConc.gml</script>
   </scripts>
   <fonts name="fonts">
+    <font>fonts\font1</font>
     <font>fonts\font0</font>
   </fonts>
   <objects name="objects">

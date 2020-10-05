@@ -99,16 +99,35 @@ for(i=0; i&lt;conectores; i++){
     yA += sprite_get_height(spr_conector)
 }
 */
-
-obj_bloco.depth = -6;
+if (instance_exists(obj_bloco)){
+    obj_bloco.depth = -6;
+}
 if(instance_exists(obj_conector)){
     obj_conector.depth = -6;
+}/*
+if (instance_exists(obj_blocoEncaixar)){
+    if (obj_blocoEncaixar.ligado == true){
+        obj_blocoEncaixar.depth = -6;
+    }
+}*/
+/*
+if (instance_exists(obj_blocoEncaixarFor)){
+    if (obj_blocoEncaixarFor.ligado == true){
+        obj_blocoEncaixarFor.depth = -6;
+    }
 }
-obj_blocoEncaixar.depth = -6;
-obj_blocoEncaixarFor.depth = -6;
-obj_blocoSe.depth = -6;
-obj_blocoEncaixarSe.depth = -6;
-if(instance_exists(obj_seConector)){
+*/
+/*
+if (instance_exists(obj_blocoSe)){
+    obj_blocoSe.depth = -6;
+}
+*/
+if (instance_exists(obj_blocoEncaixarSe)){
+    if (obj_blocoEncaixarSe.ligado == true){
+        obj_blocoEncaixarSe.depth = -6;
+    }
+}
+if (instance_exists(obj_seConector)){
     obj_seConector.depth = -6;
 }
 
@@ -117,6 +136,63 @@ if(instance_exists(obj_seConector)){
 obj_bloco.x = room_width/2 - 240;
 obj_bloco.y = room_height/2 - 80;
 
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Desenhar o texto do código
+
+draw_set_font(font1);
+draw_set_colour($362F29);
+
+xTexto = room_width/2 + 60;
+yTexto = room_height/2 - 120;
+esp = font_get_size(font1);
+
+draw_text(xTexto, yTexto, "batidas = 0; ");
+draw_text(xTexto, yTexto + esp*1, "fermento = false; ");
+draw_text(xTexto, yTexto + esp*2, "farinha = false; #");
+draw_text(xTexto, yTexto + esp*3, "for (int i=0; i&lt;" + string(maxCiclos) + "; i++){");
+
+mEsp = esp*4;
+dentroSe = false;
+for(i=0; i&lt;qntdConectores; i++){
+    comando = listaComandos[i];
+    subComando = 0;
+    scr_escreveConc(xTexto + esp, yTexto, comando)
+    /*
+    if(dentroSe == true){
+        var listaSubComandos;
+        for(j=0; j&lt;obj_blocoSe.qntdSubConectores; j++){
+            listaSubComandos[j] = obj_blocoSe.listaSubConectores[j].comandoConector;
+        }
+        for(j=0; j&lt;obj_blocoSe.qntdSubConectores; j++){
+            scr_escreveConc(xTexto, yTexto, listaSubComandos[j]);
+        }
+        dentroSe = false;
+    }
+    */
+    
+}
+
+draw_text(xTexto, yTexto + mEsp, "}");
 </string>
           </argument>
         </arguments>
