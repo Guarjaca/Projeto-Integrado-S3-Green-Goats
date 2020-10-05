@@ -50,7 +50,9 @@ menuOpcoes = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (position_meeting(mouse_x, mouse_y, self)){
+            <string>///Mudar o cursor
+
+if (position_meeting(mouse_x, mouse_y, self)){
     image_index = 1;
     window_set_cursor(cr_drag);
 }
@@ -83,7 +85,7 @@ else{
             <kind>1</kind>
             <string>///Abrir o menu
 
-if (instance_exists(obj_MenuOpcoes)==false){
+if (instance_exists(obj_MenuOpcoes)==false &amp;&amp; instance_exists(obj_concluir)==false){
     instance_create(0,0,obj_MenuOpcoes);
     instance_create(340,300,obj_Opcao1);
     instance_create(340,365,obj_Opcao2);

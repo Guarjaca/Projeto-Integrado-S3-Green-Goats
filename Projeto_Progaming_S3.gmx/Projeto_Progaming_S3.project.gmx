@@ -49,9 +49,13 @@
         <sprite>sprites\spr_animVitoria</sprite>
         <sprite>sprites\spr_animDerrota</sprite>
       </sprites>
+      <sprite>sprites\spr</sprite>
       <sprite>sprites\spr_botaoParar</sprite>
       <sprite>sprites\spr_botaoExe</sprite>
       <sprite>sprites\spr_objetivos</sprite>
+      <sprite>sprites\spr_botaoObjetivos</sprite>
+      <sprite>sprites\spr_ativaObjetivo</sprite>
+      <sprite>sprites\spr_objetivos2</sprite>
       <sprite>sprites\spr_colisor</sprite>
       <sprite>sprites\spr_BotaoConcluir</sprite>
       <sprite>sprites\spr_areaProibida</sprite>
@@ -76,6 +80,7 @@
     <script>scripts\scr_executar.gml</script>
     <script>scripts\scr_executarFase2.gml</script>
     <script>scripts\scr_executar2.gml</script>
+    <script>scripts\src_desenharConc.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font0</font>
@@ -88,13 +93,16 @@
     <object>objects\obj_blocoDicas</object>
     <object>objects\obj_conector</object>
     <object>objects\obj_lado2</object>
+    <object>objects\obj_blocoEncaixarSe</object>
+    <object>objects\obj_ladoSe</object>
+    <object>objects\obj_blocoSe</object>
+    <object>objects\obj_seConector</object>
     <objects name="Menu Principal">
       <object>objects\obj_MenuBotao_1</object>
       <object>objects\obj_MenuBotao_2</object>
       <object>objects\obj_MenuBotao_3</object>
       <object>objects\obj_MenuBotao_4</object>
     </objects>
-    <object>objects\obj_BotaoVoltar</object>
     <objects name="Selecao de Fases">
       <object>objects\obj_BotaoSelecao_1</object>
       <object>objects\obj_BotaoSelecao_2</object>
@@ -105,7 +113,13 @@
       <object>objects\obj_botaoParar</object>
       <object>objects\obj_botaoExe</object>
       <object>objects\obj_visualizador</object>
+      <object>objects\obj_botaoObjetivos</object>
+      <object>objects\obj_objetivos</object>
+      <object>objects\obj_ativaObjetivos</object>
       <object>objects\obj_mouse</object>
+      <object>objects\obj_BotaoVoltar</object>
+      <object>objects\obj_BotaoConcluir</object>
+      <object>objects\obj_concluir</object>
     </objects>
     <objects name="Opções">
       <object>objects\obj_Opcao1</object>
@@ -114,21 +128,13 @@
       <object>objects\obj_Opcao4</object>
       <object>objects\obj_BotaoOpcoes</object>
       <object>objects\obj_MenuOpcoes</object>
-      <object>objects\obj_concluir</object>
-      <object>objects\obj_BotaoConcluir</object>
     </objects>
-    <object>objects\obj_objetivos</object>
-    <object>objects\obj_ativaObjetivos</object>
     <objects name="Telas">
       <object>objects\obj_telaComandos</object>
       <object>objects\obj_telaCodigo</object>
       <object>objects\obj_telaVisualizacao</object>
       <object>objects\obj_areaProibida</object>
     </objects>
-    <object>objects\obj_ladoSe</object>
-    <object>objects\obj_seConector</object>
-    <object>objects\obj_blocoEncaixarSe</object>
-    <object>objects\obj_blocoSe</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\Room_MenuPrincipal</room>

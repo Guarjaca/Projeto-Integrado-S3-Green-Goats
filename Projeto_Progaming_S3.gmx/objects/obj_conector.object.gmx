@@ -162,6 +162,7 @@ for (i = 0; i &lt; ordem; i++){
     
 }
 
+x = obj_bloco.x0Conectores;
 y = obj_bloco.y0Conectores + sprite_height*(deltaY + ordem);
 </string>
           </argument>

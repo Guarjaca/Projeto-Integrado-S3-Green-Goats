@@ -32,10 +32,9 @@ switch(arrayComandos[posicao]){
     case SE:
         //Pegar a peça se
         var pecaSe = obj_bloco.listaConectores[comandoAtual].objConectado;
-        show_debug_message("obj_deus: oieeeee");
+        //show_debug_message("obj_deus: oieeeee");
         
         if(pecaSe.comandoSe && dentroIf == false){
-            draw_circle(x, y, 20, false);
             dentroIf = true;
         }
         break;

@@ -3,7 +3,7 @@
   <spriteName>spr_Concluir</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-1</depth>
+  <depth>-5</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -26,6 +26,98 @@
           <argument>
             <kind>1</kind>
             <string></string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Ajuste de posição
+/*
+x = room_width/2 - sprite_width/2;
+y = room_height/2 - sprite_height/2;
+*/
+
+x = 0;
+y = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Desenhar a resposta
+
+draw_self();
+/*
+xA = room_width/2 - 200;
+yA = room_height/2 - 120;
+draw_sprite(spr_bloco, 0, xA, yA);
+
+xA += -46 + 25
+yA += 37 + sprite_get_height(spr_conector)/2;
+
+conectores = qntdConectores;
+for(i=0; i&lt;conectores; i++){
+    lista[i] = obj_bloco.listaConectores[i];
+}
+
+for(i=0; i&lt;conectores; i++){
+    draw_sprite(spr_conector, 0, xA, yA);
+    src_desenharConc(lista, lista[i].comandoConector)
+    yA += sprite_get_height(spr_conector)
+}
+*/
+
+obj_bloco.depth = -6;
+if(instance_exists(obj_conector)){
+    obj_conector.depth = -6;
+}
+obj_blocoEncaixar.depth = -6;
+obj_blocoEncaixarFor.depth = -6;
+obj_blocoSe.depth = -6;
+obj_blocoEncaixarSe.depth = -6;
+if(instance_exists(obj_seConector)){
+    obj_seConector.depth = -6;
+}
+
+
+
+obj_bloco.x = room_width/2 - 240;
+obj_bloco.y = room_height/2 - 80;
+
+</string>
           </argument>
         </arguments>
       </action>

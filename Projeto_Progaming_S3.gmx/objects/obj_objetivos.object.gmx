@@ -25,10 +25,39 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>x = room_width/2 - 200;
-y = room_height/2 - 200;
+            <string>///Setando as coordenadas
+
+x = room_width/2;
+y = room_height/2;
+if (room == Room_Fase2){
+    sprite_index = spr_objetivos2;
+    instance_create(x, y + 303, obj_botaoObjetivos);
+}//628 663 / 640 360 / -12 303
 
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="1" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>instance_destroy(obj_botaoObjetivos);
 </string>
           </argument>
         </arguments>
@@ -51,7 +80,11 @@ y = room_height/2 - 200;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_destroy(self);
+            <string>///Fechar
+
+if(position_meeting(mouse_x, mouse_y, self)){
+    instance_destroy(self);
+}
 </string>
           </argument>
         </arguments>
@@ -78,11 +111,14 @@ y = room_height/2 - 200;
 
 draw_self();
 
-draw_set_colour(c_black);
-draw_text_ext(x + 50, y + 50, "Objetivos:", 24, 300);
-draw_text_ext(x + 50, y + 80, "Fazer a bolinha preta pegar a bolinha vermelha e chegar na amarela", 10, 300);
-draw_text_ext(x + 50, y + 120, "Dica: A amarela está a 10 passos para baixo e para a direita", 10, 300);
-
+if(room == Room_Fase1){
+    draw_set_colour(c_black);
+    draw_text_ext(x + 50, y + 50, "Objetivos:", 24, 300);
+    draw_text_ext(x + 50, y + 80, "Fazer a bolinha preta pegar a bolinha vermelha e chegar na amarela", 10, 300);
+    draw_text_ext(x + 50, y + 120, "Dica: A amarela está a 10 passos para baixo e para a direita", 10, 300);
+}else if(room == Room_Fase2){
+    sprite_index = spr_objetivos2;
+}
 </string>
           </argument>
         </arguments>

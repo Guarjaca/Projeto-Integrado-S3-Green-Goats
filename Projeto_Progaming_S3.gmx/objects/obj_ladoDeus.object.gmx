@@ -50,8 +50,8 @@
             <kind>1</kind>
             <string>///Ligar ao obj_deus
 
-x = blocoPai.x + 32;
-y = blocoPai.y + 40;
+x = blocoPai.x + 17;
+y = blocoPai.y + 91;
 </string>
           </argument>
         </arguments>

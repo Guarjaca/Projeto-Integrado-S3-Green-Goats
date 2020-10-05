@@ -286,6 +286,8 @@ if(conectado == false){
             <kind>1</kind>
             <string>///Movimento
 
+if (instance_exists(obj_MenuOpcoes)==false &amp;&amp; instance_exists(obj_concluir)==false &amp;&amp; instance_exists(obj_objetivos)==false){
+
 click = mouse_check_button(mb_left);
 justClicked = mouse_check_button_pressed(mb_left);
 
@@ -303,6 +305,8 @@ if (voltando == false){
 if (pego == true){
     x = mouse_x;
     y = mouse_y;
+    
+    path_change_point(caminhoVolta, 1, x, y, 100);
 }else{
     if (blocoLigado != noone){
         alocado = true;
@@ -329,12 +333,18 @@ if (pego == true){
 //=========================
 //Seção ao estar alocado
 if  (alocado == true){
-    x = blocoLigado.x + 32 + 22;
-    y = blocoLigado.y + 40 + 24;
-} 
+    x = blocoLigado.ladoDeus.x + 29;
+    y = blocoLigado.ladoDeus.y + 19;
+} // 46 37 / 17 18 / 29 19
 
 
 //show_debug_message("obj_bloco: pego está: " + string(pego));
+
+
+}
+
+x0Conectores = x - 46 + 25;
+y0Conectores = y + 37 + sprite_get_height(spr_conector)/2;
 </string>
           </argument>
         </arguments>

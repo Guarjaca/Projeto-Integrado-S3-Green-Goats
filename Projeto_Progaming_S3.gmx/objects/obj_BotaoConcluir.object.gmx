@@ -3,7 +3,7 @@
   <spriteName>spr_BotaoConcluir</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-2</depth>
+  <depth>-6</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -25,7 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_index = 0;
+            <string>///Inicialização de variáveis
+
+image_index = 0;
 </string>
           </argument>
         </arguments>
@@ -48,7 +50,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (position_meeting(mouse_x, mouse_y, self)){
+            <string>///Mudar o cursor
+
+if (position_meeting(mouse_x, mouse_y, self)){
     image_index = 1;
     window_set_cursor(cr_drag);
 }
@@ -57,6 +61,33 @@ else{
     image_index = 0;
     window_set_cursor(cr_default);
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Ajuste de coordenadas
+
+x = obj_concluir.x + obj_concluir.sprite_width/2 - 165;
+y = obj_concluir.y + obj_concluir.sprite_height/2 + 224;
+
+//475 584 / 640 360 / 165 224
+
 </string>
           </argument>
         </arguments>

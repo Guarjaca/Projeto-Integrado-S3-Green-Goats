@@ -87,6 +87,9 @@ vencer = false;
 globalvar perder;
 perder = false;
 
+globalvar terminou;
+terminou = false;
+
 executar = false;
 
 
@@ -163,13 +166,42 @@ METADE_CICLOS = ciclos == floor(maxCiclos/2);
             <kind>1</kind>
             <string>///Variáveis para conexão
 
-ladoDeus = instance_create(x + 32, y + 40, obj_ladoDeus);
+ladoDeus = instance_create(x + 17, y + 91, obj_ladoDeus);
 
 with (ladoDeus){
     blocoPai = noone;
 }
 
 ladoDeus.blocoPai = self;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Parar a animação
+
+terminou = true;
+obj_visualizador.image_speed = 0;
+
+instance_create(room_width/2, room_height/2, obj_concluir);
+instance_create(room_width/2, room_height/2, obj_BotaoConcluir);
 </string>
           </argument>
         </arguments>
@@ -358,10 +390,16 @@ if(executar == true){
             <kind>1</kind>
             <string>///Criar a instância da tela de vitória
 
-if(vencer == true){
-    instance_create(0,0,obj_concluir);
-    instance_create(475,584,obj_BotaoConcluir);
-    
+switch(room){
+    case Room_Fase1:
+        if(vencer == true &amp;&amp; !instance_exists(obj_concluir)){
+            instance_create(0,0,obj_concluir);
+            instance_create(475,584,obj_BotaoConcluir);
+        }
+        break;
+    default:
+        break;
+        
 }
 
 /*largura = 600;
@@ -400,9 +438,12 @@ if (room == Room_Fase2){
     
     if(perder == false &amp;&amp; vencer == false){
     
-    if(executar == true &amp;&amp; alarm[0] &lt;= 0){//============
+    if(executar == true &amp;&amp; alarm[0] &lt; 0){//============
         if(ciclos &lt;= 0){
             obj_visualizador.sprite_index = spr_animNeutro;
+            if(batidas == 10 &amp;&amp; perder == false){
+                vencer = true;
+            }
             //executar = false;
         }else{//======
             if(comandoAtual &lt; array_length_1d(listaComandos)){
@@ -437,6 +478,9 @@ if (room == Room_Fase2){
         ciclos = maxCiclos;
     }
     
+    }else if(vencer == true &amp;&amp; perder == false &amp;&amp; alarm[1]&lt;0 &amp;&amp; terminou == false){
+        obj_visualizador.sprite_index = spr_animVitoria;
+        alarm[1] = obj_visualizador.image_number;
     }
 }
 </string>

@@ -91,6 +91,8 @@ path_add_point(caminhoVolta, x, y, 100);
             <kind>1</kind>
             <string>///Movimento
 
+if (instance_exists(obj_MenuOpcoes)==false &amp;&amp; instance_exists(obj_concluir)==false &amp;&amp; instance_exists(obj_objetivos)==false){
+
 click = mouse_check_button(mb_left)
 justClicked = mouse_check_button_pressed(mb_left);
 
@@ -144,10 +146,15 @@ if(pego == true){
     
 }
 
+
+}
+
 if (ligado == true){//Dar snap para as posições do bloco que está ligado
     x = blocoLigado.x + 28;
     y = blocoLigado.y + 17;
 }
+
+
 
 </string>
           </argument>
