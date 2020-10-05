@@ -8,10 +8,14 @@ switch(arrayComandos[posicao]){
         break;
     case BATER_MASSA:
         batidas++;
+        if(batidas > 10){
+            perderPor = BATER_MASSA;
+        }
         with(obj_visualizador){
             sprite_index = spr_animMexe;
             image_speed = 1;
         }
+        
         alarm[0] = obj_visualizador.image_number;
         break;
     case FERMENTO:
@@ -19,15 +23,24 @@ switch(arrayComandos[posicao]){
             fermento = true;
         }else{
             perder = true;
+            perderPor = FERMENTO;
         }
         with(obj_visualizador){
             sprite_index = spr_animFermento;
             image_speed = 1;
         }
-        alarm[0] = obj_visualizador.image_number;
+        alarm[0] = obj_visualizador.image_number - 4;
         break;
     case FARINHA:
-        farinha = true;
+            farinha = true;
+            perder = true;
+            perderPor = FARINHA;
+        
+        with(obj_visualizador){
+            sprite_index = spr_animFarinha;
+            image_speed = 1;
+        }
+        alarm[0] = obj_visualizador.image_number;
         break;
     case SE:
         //Pegar a peça se

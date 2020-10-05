@@ -3,7 +3,7 @@
   <spriteName>spr_blocoDicas</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-1</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -132,6 +132,8 @@ batidas = 0;
 fermento = false;
 farinha = false;
 
+perderPor = NADA;
+
 globalvar BATER_MASSA;
 BATER_MASSA = 1;
 globalvar FERMENTO;
@@ -142,6 +144,14 @@ globalvar SE;
 SE = 4;
 globalvar METADE_CICLOS;
 METADE_CICLOS = ciclos == floor(maxCiclos/2);
+
+
+globalvar BATEU_MUITO;
+BATEU_MUITO = 6;
+globalvar BATEU_POUCO;
+BATEU_POUCO = 7;
+
+
 
 
 </string>
@@ -173,6 +183,50 @@ with (ladoDeus){
 }
 
 ladoDeus.blocoPai = self;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Alarme de derrota
+
+terminou = true;
+
+//obj_visualizador.sprite_index = spr_animDerrota;
+
+switch(perderPor){
+    default:
+        break;
+    case FERMENTO:
+        with(obj_visualizador){
+            sprite_index = spr_animDerrotaFermento2;
+            image_speed = 1;
+        }
+        break;
+    case FARINHA:
+        with(obj_visualizador){
+            sprite_index = spr_animDerrotaFarinha2;
+            image_speed = 1;
+        }
+        break;
+}
 </string>
           </argument>
         </arguments>
@@ -224,15 +278,30 @@ instance_create(room_width/2, room_height/2, obj_BotaoConcluir);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Alarme de esperar
+            <string>///Alarme de esperar e cuidar da derrota no meio da execução
 
 //obj_visualizador.image_speed = 0;
 
-if(perder == true){
-    with(obj_visualizador){
-            sprite_index = spr_animDerrota;
-            image_speed = 1;
+if(perder == true &amp;&amp; terminou == false &amp;&amp; alarm[2]&lt;0){
+    switch(perderPor){
+        default:
+            break;
+        case FERMENTO:
+            with(obj_visualizador){
+                sprite_index = spr_animDerrotaFermento;
+                image_speed = 1;
+            }
+            alarm[2] = 3*room_speed;
+            break;
+        case FARINHA:
+            with(obj_visualizador){
+                sprite_index = spr_animDerrotaFarinha;
+                image_speed = 1;
+            }
+            alarm[2] = 3*room_speed;
+            break;
     }
+    
 }
 </string>
           </argument>
@@ -439,10 +508,16 @@ if (room == Room_Fase2){
     if(perder == false &amp;&amp; vencer == false){
     
     if(executar == true &amp;&amp; alarm[0] &lt; 0){//============
-        if(ciclos &lt;= 0){
+        if(ciclos &lt;= 0){//Quando parar
             obj_visualizador.sprite_index = spr_animNeutro;
             if(batidas == 10 &amp;&amp; perder == false){
                 vencer = true;
+            }else if(batidas &gt; 10){//Perder por bater demais
+                perder = true;
+                perderPor = BATEU_MUITO;
+            }else if(batidas &lt; 10){
+                perder = true;
+                perderPor = BATEU_POUCO;
             }
             //executar = false;
         }else{//======
@@ -478,9 +553,33 @@ if (room == Room_Fase2){
         ciclos = maxCiclos;
     }
     
+    //Condição de vitória
     }else if(vencer == true &amp;&amp; perder == false &amp;&amp; alarm[1]&lt;0 &amp;&amp; terminou == false){
         obj_visualizador.sprite_index = spr_animVitoria;
         alarm[1] = obj_visualizador.image_number;
+    }else if (perder == true &amp;&amp; terminou == false){///Cuidar dos casos de perda
+        if(perderPor == BATEU_MUITO){
+            obj_visualizador.sprite_index = spr_animDerrotaBaterMuito;        
+        }
+        switch(perderPor){
+            default:
+                break;
+            case BATEU_MUITO:
+                with(obj_visualizador){
+                    sprite_index = spr_animDerrotaBaterMuito;
+                    image_speed = 1;
+                }
+                alarm[2] = 3*room_speed;
+                break;
+            case BATEU_POUCO:
+                with(obj_visualizador){
+                    sprite_index = spr_animDerrotaBaterPouco;
+                    image_speed = 1;
+                }
+                alarm[2] = 3*room_speed;
+                break;
+        }
+        
     }
 }
 </string>

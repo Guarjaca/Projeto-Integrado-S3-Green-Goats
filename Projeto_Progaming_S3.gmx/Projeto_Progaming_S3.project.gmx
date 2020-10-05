@@ -43,11 +43,20 @@
     </sprites>
     <sprites name="Interace">
       <sprites name="Animações">
-        <sprite>sprites\spr_animMexe</sprite>
         <sprite>sprites\spr_animNeutro</sprite>
+        <sprite>sprites\spr_animMexe</sprite>
         <sprite>sprites\spr_animFermento</sprite>
         <sprite>sprites\spr_animVitoria</sprite>
         <sprite>sprites\spr_animDerrota</sprite>
+        <sprite>sprites\spr_animDerrotaFarinha</sprite>
+        <sprite>sprites\spr_animDerrotaFarinha2</sprite>
+        <sprite>sprites\spr_animDerrotaFermento</sprite>
+        <sprite>sprites\spr_animDerrotaFermento2</sprite>
+        <sprite>sprites\spr_animDerrotaBaterMuito</sprite>
+        <sprite>sprites\spr_animDerrotaBaterMuito2</sprite>
+        <sprite>sprites\spr_animDerrotaBaterPouco</sprite>
+        <sprite>sprites\spr_animDerrotaBaterPouco2</sprite>
+        <sprite>sprites\spr_animFarinha</sprite>
       </sprites>
       <sprite>sprites\spr</sprite>
       <sprite>sprites\spr_botaoParar</sprite>
