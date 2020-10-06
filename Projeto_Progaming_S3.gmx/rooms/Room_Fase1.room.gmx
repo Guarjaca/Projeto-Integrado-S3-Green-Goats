@@ -65,7 +65,7 @@
     <instance objName="obj_mouse" x="78" y="110" name="inst_84FB08B8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_BotaoOpcoes" x="1184" y="3" name="inst_C6FCE673" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_objetivos" x="640" y="360" name="inst_BFE0615A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_ativaObjetivos" x="904" y="688" name="inst_84B26BD0" locked="0" code="" scaleX="8.8100004196167" scaleY="2.03125" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ativaObjetivos" x="753" y="616" name="inst_0310F3F8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
