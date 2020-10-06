@@ -50,15 +50,10 @@ image_speed = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-<<<<<<< HEAD
             <string>///Dar o highlight
 
 if (instance_exists(obj_pularTut)==false){
     if(instance_exists(obj_tut_R2) || instance_exists(obj_tut_R1) || !instance_exists(obj_simTut) || !instance_exists(obj_naoTut)){
-=======
-            <string>if (instance_exists(obj_pularTut)==false){
-    if(instance_exists(obj_tut_R1) || instance_exists(obj_tut_R2) || instance_exists(obj_tut_R3)){
->>>>>>> ade4f955aa5ed4b75670a353d2766fc5f847f80b
         if(position_meeting(mouse_x, mouse_y, self)){
             image_index = 1;
         }
@@ -125,12 +120,7 @@ if (instance_exists(obj_pularTut)==false &amp;&amp; image_index != 2){
                 }
             }
         }
-<<<<<<< HEAD
     }else if(instance_exists(obj_tut_R2)){
-=======
-    }
-    else if(instance_exists(obj_tut_R2)){
->>>>>>> ade4f955aa5ed4b75670a353d2766fc5f847f80b
         with(obj_tut_R2){
             image_index += 1;
             /*
@@ -148,14 +138,6 @@ if (instance_exists(obj_pularTut)==false &amp;&amp; image_index != 2){
                 }
             }
             */
-        }
-    }
-    else if(instance_exists(obj_tut_R3)){
-        with(obj_tut_R3){
-            if(image_index == (image_number-1)){
-                room_goto(Room_Selecao);
-            }
-            image_index +=1;
         }
     }
 }
