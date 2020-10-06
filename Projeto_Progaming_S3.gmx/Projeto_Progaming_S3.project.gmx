@@ -84,6 +84,22 @@
       <sprite>sprites\spr_bolinha</sprite>
       <sprite>sprites\spr_espCiclos</sprite>
     </sprites>
+    <sprites name="Tutorial">
+      <sprite>sprites\spr_proximo</sprite>
+      <sprite>sprites\spr_pularTutorial</sprite>
+      <sprite>sprites\spr_botaoTutorial1</sprite>
+      <sprite>sprites\spr_botaoTutorial2</sprite>
+      <sprite>sprites\spr_botaoTutorial3</sprite>
+      <sprite>sprites\spr_botaoTutorial4</sprite>
+      <sprite>sprites\spr_pularTut</sprite>
+      <sprite>sprites\spr_tut_R1</sprite>
+      <sprite>sprites\spr_tut_R2</sprite>
+      <sprite>sprites\spr_nao</sprite>
+      <sprite>sprites\spr_sim</sprite>
+      <sprite>sprites\spr_gira</sprite>
+      <sprite>sprites\spr_giraNum</sprite>
+      <sprite>sprites\spr_giraRepetir</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\Tela_Menu_Principal</background>
@@ -105,6 +121,7 @@
   <fonts name="fonts">
     <font>fonts\font1</font>
     <font>fonts\font0</font>
+    <font>fonts\font_cilos</font>
   </fonts>
   <objects name="objects">
     <object>objects\obj_bloco</object>
@@ -156,7 +173,21 @@
       <object>objects\obj_telaVisualizacao</object>
       <object>objects\obj_areaProibida</object>
     </objects>
-    <object>objects\obj_tutorial</object>
+    <objects name="Tutorial">
+      <object>objects\obj_proximo</object>
+      <object>objects\obj_pularTutorial</object>
+      <object>objects\obj_botaoTutorial1</object>
+      <object>objects\obj_botaoTutorial2</object>
+      <object>objects\obj_botaoTutorial3</object>
+      <object>objects\obj_botaoTutorial4</object>
+      <object>objects\obj_tutorial</object>
+      <object>objects\obj_pularTut</object>
+      <object>objects\obj_tut_R1</object>
+      <object>objects\obj_tut_R2</object>
+      <object>objects\obj_sim</object>
+      <object>objects\obj_nao</object>
+      <object>objects\obj_gira</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\Room_MenuPrincipal</room>

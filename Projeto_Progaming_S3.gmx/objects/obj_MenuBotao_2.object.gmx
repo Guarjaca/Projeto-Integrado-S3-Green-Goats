@@ -79,7 +79,7 @@ else{
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>room_goto(Room_Fase1);
+            <string>room_goto(Room_Tutorial);
 </string>
           </argument>
         </arguments>
