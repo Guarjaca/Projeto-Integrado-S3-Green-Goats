@@ -25,7 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed = 0;
+            <string>///Ajustar a image_speed
+
+image_speed = 0;
 </string>
           </argument>
         </arguments>
@@ -48,14 +50,16 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (instance_exists(obj_pularTut)==false){
-if(position_meeting(mouse_x, mouse_y, self)){
-    image_index = 1;
-}
+            <string>///Dar o highlight
 
-else{
-    image_index = 0;
-}
+if (instance_exists(obj_pularTut)==false){
+    if(position_meeting(mouse_x, mouse_y, self)){
+        image_index = 1;
+    }
+    
+    else{
+        image_index = 0;
+    }
 }
 </string>
           </argument>

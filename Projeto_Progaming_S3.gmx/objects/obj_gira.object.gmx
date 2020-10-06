@@ -77,19 +77,21 @@ draw_text(x - 12, y-138, ciclos);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_angle += -10;
+            <string>///Fazer girar
+image_angle += -10;//Usar um divisor de 180 para fazer funcionar bonitinho
 
 if(image_angle &lt; -360){
     image_angle = 0;
     ciclos++;
 }
     
-    
+/*    
 if(image_angle%180 == 0){
     if (obj_tut_R2.image_index &gt;= 20 &amp;&amp; obj_tut_R2.image_index &lt;= 34){
         obj_tut_R2.image_index++;
     }
 }
+*/
 </string>
           </argument>
         </arguments>

@@ -92,13 +92,19 @@
       <sprite>sprites\spr_botaoTutorial3</sprite>
       <sprite>sprites\spr_botaoTutorial4</sprite>
       <sprite>sprites\spr_pularTut</sprite>
+      <sprite>sprites\spr_tut_R1_Sim</sprite>
       <sprite>sprites\spr_tut_R1</sprite>
-      <sprite>sprites\spr_tut_R2</sprite>
       <sprite>sprites\spr_nao</sprite>
       <sprite>sprites\spr_sim</sprite>
-      <sprite>sprites\spr_gira</sprite>
-      <sprite>sprites\spr_giraNum</sprite>
-      <sprite>sprites\spr_giraRepetir</sprite>
+      <sprites name="rota2">
+        <sprite>sprites\spr_tut_R2</sprite>
+        <sprite>sprites\spr_gira</sprite>
+        <sprite>sprites\spr_giraRepetir</sprite>
+        <sprite>sprites\spr_giraNum</sprite>
+        <sprite>sprites\spr_gira2</sprite>
+        <sprite>sprites\spr_giraNum2</sprite>
+        <sprite>sprites\spr_giraRepetir2</sprite>
+      </sprites>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -182,11 +188,14 @@
       <object>objects\obj_botaoTutorial4</object>
       <object>objects\obj_tutorial</object>
       <object>objects\obj_pularTut</object>
+      <object>objects\obj_naoTut</object>
+      <object>objects\obj_simTut</object>
       <object>objects\obj_tut_R1</object>
       <object>objects\obj_tut_R2</object>
       <object>objects\obj_sim</object>
       <object>objects\obj_nao</object>
       <object>objects\obj_gira</object>
+      <object>objects\obj_gira2</object>
     </objects>
   </objects>
   <rooms name="rooms">

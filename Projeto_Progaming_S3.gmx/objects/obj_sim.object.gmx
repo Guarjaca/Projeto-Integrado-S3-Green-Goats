@@ -25,7 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_index = 0;
+            <string>///Velocidade da imagem
+
+image_index = 0;
 </string>
           </argument>
         </arguments>
@@ -48,7 +50,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(position_meeting(mouse_x, mouse_y, self)){
+            <string>///Dar o highlight
+
+if(position_meeting(mouse_x, mouse_y, self)){
     image_index = 1;
 }
 
@@ -77,7 +81,9 @@ else{
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>room_goto(Room_Selecao);
+            <string>///Voltar para a tela de seleção
+
+room_goto(Room_Selecao);
 </string>
           </argument>
         </arguments>

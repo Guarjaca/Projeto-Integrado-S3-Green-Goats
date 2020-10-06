@@ -25,7 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed = 0;
+            <string>///Ajustar a image_speed
+
+image_speed = 0;
 </string>
           </argument>
         </arguments>
@@ -94,22 +96,31 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_self();
-if(image_index &lt;= 15 &amp;&amp; 3&lt;= image_index){
-  obj_proximo.image_index = 2;
-  if(alarm[0]&lt;0){
-    alarm[0] = 15;
-  }
+            <string>///Executar animações
+draw_self();
+if(image_index &lt;= 15 &amp;&amp; 3&lt;= image_index){//Animar o boneco pulando, sem o giragira
+    obj_proximo.image_index = 2;
+    if(alarm[0]&lt;0){
+        alarm[0] = 15;
+    }
 }
 
-if(image_index == 18 &amp;&amp; !instance_exists(obj_gira)){
-    instance_create(room_width/2,room_height/2,obj_gira);
+if(image_index == 18 &amp;&amp; !instance_exists(obj_gira)){//Ao chegar no frame com a animação de girar
+    instance_create(580, 320, obj_gira);
+}else if(instance_exists(obj_gira) &amp;&amp; image_index &gt; 19){
+    instance_destroy(obj_gira);
 }
 /*
 if(image_index &lt;= 15 &amp;&amp; 3&lt;= image_index){
   if(alarm[1]&lt;0){
     alarm[1] = 15;
   }
+}
+*/
+if(image_index == 20 &amp;&amp; !instance_exists(obj_gira2)){
+    instance_create(room_width/2 - 250, room_height/2 - 100, obj_gira2);
+}else if(instance_exists(obj_gira2) &amp;&amp; image_index &gt; 34){
+    instance_destroy(obj_gira2);
 }
 </string>
           </argument>

@@ -171,33 +171,51 @@ xTexto = room_width/2 + 60;
 yTexto = room_height/2 - 120;
 esp = font_get_size(font1);
 
-draw_text(xTexto, yTexto, "batidas = 0; ");
-draw_text(xTexto, yTexto + esp*1, "fermento = false; ");
-draw_text(xTexto, yTexto + esp*2, "farinha = false; #");
-draw_text(xTexto, yTexto + esp*3, "for (int i=0; i&lt;" + string(maxCiclos) + "; i++){");
-
-mEsp = esp*4;
-dentroSe = false;
-for(i=0; i&lt;qntdConectores; i++){
-    comando = listaComandos[i];
-    subComando = 0;
-    scr_escreveConc(xTexto + esp, yTexto, comando)
-    /*
-    if(dentroSe == true){
-        var listaSubComandos;
-        for(j=0; j&lt;obj_blocoSe.qntdSubConectores; j++){
-            listaSubComandos[j] = obj_blocoSe.listaSubConectores[j].comandoConector;
-        }
-        for(j=0; j&lt;obj_blocoSe.qntdSubConectores; j++){
-            scr_escreveConc(xTexto, yTexto, listaSubComandos[j]);
-        }
-        dentroSe = false;
-    }
-    */
+if(room == Room_Fase2){
+    draw_text(xTexto, yTexto, "int batidas = 0; ");
+    draw_text(xTexto, yTexto + esp*1, "boolean fermento = false; ");
+    draw_text(xTexto, yTexto + esp*2, "boolean farinha = false; #");
+    draw_text(xTexto, yTexto + esp*3, "for (int i=0; i&lt;" + string(maxCiclos) + "; i++){");
     
+    mEsp = esp*4;
+    dentroSe = false;
+    for(i=0; i&lt;qntdConectores; i++){
+        comando = listaComandos[i];
+        subComando = 0;
+        scr_escreveConc(xTexto + esp, yTexto, comando)
+        /*
+        if(dentroSe == true){
+            var listaSubComandos;
+            for(j=0; j&lt;obj_blocoSe.qntdSubConectores; j++){
+                listaSubComandos[j] = obj_blocoSe.listaSubConectores[j].comandoConector;
+            }
+            for(j=0; j&lt;obj_blocoSe.qntdSubConectores; j++){
+                scr_escreveConc(xTexto, yTexto, listaSubComandos[j]);
+            }
+            dentroSe = false;
+        }
+        */
+        
+    }
+    draw_text(xTexto, yTexto + mEsp, "} ");
+    
+}else if(room == Room_Fase1){
+    draw_text(xTexto, yTexto, "int x = 0; ");
+    draw_text(xTexto, yTexto + esp*1, "int y = 0; ")
+    draw_text(xTexto, yTexto + esp*2, "boolean bolinha = false; ");
+    draw_text(xTexto, yTexto + esp*3, "for (int i=0; i&lt;" + string(maxCiclos) + "; i++){");
+    
+    mEsp = esp*4;
+    dentroSe = false;
+    for(i=0; i&lt;qntdConectores; i++){
+        comando = listaComandos[i];
+        subComando = 0;
+        scr_escreveConc(xTexto + esp, yTexto, comando)
+        
+    }
+    
+    draw_text(xTexto, yTexto + mEsp, "} ");
 }
-
-draw_text(xTexto, yTexto + mEsp, "}");
 </string>
           </argument>
         </arguments>
