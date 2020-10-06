@@ -94,6 +94,11 @@
       <sprite>sprites\spr_pularTut</sprite>
       <sprite>sprites\spr_tut_R1_Sim</sprite>
       <sprite>sprites\spr_tut_R1</sprite>
+<<<<<<< HEAD
+=======
+      <sprite>sprites\spr_tut_R2</sprite>
+      <sprite>sprites\spr_tut_R3</sprite>
+>>>>>>> ade4f955aa5ed4b75670a353d2766fc5f847f80b
       <sprite>sprites\spr_nao</sprite>
       <sprite>sprites\spr_sim</sprite>
       <sprites name="rota2">
@@ -192,6 +197,7 @@
       <object>objects\obj_simTut</object>
       <object>objects\obj_tut_R1</object>
       <object>objects\obj_tut_R2</object>
+      <object>objects\obj_tut_R3</object>
       <object>objects\obj_sim</object>
       <object>objects\obj_nao</object>
       <object>objects\obj_gira</object>
