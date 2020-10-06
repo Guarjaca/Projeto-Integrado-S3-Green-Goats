@@ -226,6 +226,18 @@ switch(perderPor){
             image_speed = 1;
         }
         break;
+    case BATEU_MUITO:
+        with(obj_visualizador){
+            sprite_index = spr_animDerrotaBaterMuito2;
+            image_speed = 1;
+        }
+        break;
+    case BATEU_POUCO:
+        with(obj_visualizador){
+            sprite_index = spr_animDerrotaBaterPouco2;
+            image_speed = 1;
+        }
+        break;
 }
 </string>
           </argument>
@@ -557,7 +569,7 @@ if (room == Room_Fase2){
     }else if(vencer == true &amp;&amp; perder == false &amp;&amp; alarm[1]&lt;0 &amp;&amp; terminou == false){
         obj_visualizador.sprite_index = spr_animVitoria;
         alarm[1] = obj_visualizador.image_number;
-    }else if (perder == true &amp;&amp; terminou == false){///Cuidar dos casos de perda
+    }else if (perder == true &amp;&amp; terminou == false &amp;&amp; alarm[2]&lt;0){///Cuidar dos casos de perda
         if(perderPor == BATEU_MUITO){
             obj_visualizador.sprite_index = spr_animDerrotaBaterMuito;        
         }

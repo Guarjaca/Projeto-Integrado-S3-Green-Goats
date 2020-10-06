@@ -84,6 +84,10 @@ if (instance_exists(obj_MenuOpcoes)==false &amp;&amp; instance_exists(obj_conclu
 obj_deus.executar = false;
 perder = false;
 
+if(!audio_is_playing(sound_parar)){
+    audio_play_sound(sound_parar, 1, false);
+}
+
 switch(room){
     case Room_Fase1:
         with (obj_deus){

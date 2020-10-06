@@ -4,7 +4,16 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\sound_Jogar</sound>
+    <sound>sound\sound_parar</sound>
+    <sound>sound\sound_executar</sound>
+    <sound>sound\sound_confirma</sound>
+    <sound>sound\sound_nega</sound>
+    <sound>sound\sound_pularTutorial</sound>
+    <sound>sound\sound_perder</sound>
+    <sound>sound\sound_vencer</sound>
+  </sounds>
   <sprites name="sprites">
     <sprites name="Peças">
       <sprite>sprites\spr_barraFinal</sprite>

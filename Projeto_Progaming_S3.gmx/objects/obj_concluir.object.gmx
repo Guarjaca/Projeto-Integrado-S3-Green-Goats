@@ -25,7 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string></string>
+            <string>///Tocar o som da vitoria
+
+audio_play_sound(sound_vencer, 1, false);
+</string>
           </argument>
         </arguments>
       </action>

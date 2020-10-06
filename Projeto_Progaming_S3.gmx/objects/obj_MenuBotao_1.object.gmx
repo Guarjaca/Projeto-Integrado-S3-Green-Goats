@@ -80,6 +80,7 @@ else{
           <argument>
             <kind>1</kind>
             <string>window_set_cursor(cr_default);
+audio_play_sound(sound_Jogar, 1, false);
 room_goto(Room_Selecao);
 
 </string>
