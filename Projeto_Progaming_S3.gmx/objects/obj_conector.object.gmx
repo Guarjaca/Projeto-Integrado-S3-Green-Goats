@@ -119,7 +119,7 @@ if(objConectado != noone){//Se está ligado a alguém
         conectado = false;
     }
     //=====================================
-    if(comandoConector == SE){
+    if(comandoConector == SE &amp;&amp; instance_exists(obj_blocoSe)){
         qntdExtensores = objConectado.qntdSubConectores;
     }
 

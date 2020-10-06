@@ -4,6 +4,8 @@ xT = argument0;
 yT = argument1;
 comando = argument2;
 
+if(room == Room_Fase2){
+
 switch(comando){
     default:
         break;
@@ -35,3 +37,5 @@ switch(comando){
 }
 
 mEsp += esp;
+
+}

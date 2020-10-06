@@ -81,6 +81,7 @@ if(obj_deus.executar == false){
             <string>///Desenhar os ciclos
 
 draw_self();
+draw_sprite(spr_espCiclos, 0, x, y);
 
 
 </string>

@@ -55,6 +55,7 @@
     <instance objName="obj_MenuBotao_2" x="0" y="403" name="inst_F2E42CE5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_MenuBotao_3" x="0" y="475" name="inst_E49EA50E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_MenuBotao_4" x="0" y="547" name="inst_E29F5A93" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_tutorial" x="82" y="207" name="inst_C850A26C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

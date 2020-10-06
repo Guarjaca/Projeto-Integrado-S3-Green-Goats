@@ -10,7 +10,7 @@
   <persistent>0</persistent>
   <colour>12632256</colour>
   <showcolour>-1</showcolour>
-  <code>instance_create(obj_areaProibida);</code>
+  <code>instance_create(0, 0, obj_areaProibida);</code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
@@ -51,20 +51,20 @@
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="obj_deus" x="289" y="124" name="inst_E43B9E51" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_bloco" x="167" y="157" name="inst_6E1D0DA9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_blocoEncaixar" x="50" y="327" name="inst_41ECF859" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_blocoEncaixar" x="43" y="463" name="inst_35173102" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_blocoEncaixar" x="78" y="257" name="inst_9D636F73" locked="0" code="comando = moverBAIXO;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_blocoEncaixar" x="91" y="178" name="inst_A68A15C0" locked="0" code="comando = moverESQUERDA;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_blocoEncaixar" x="52" y="399" name="inst_DD28B2F7" locked="0" code="comando = moverBAIXO;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_blocoEncaixarFor" x="62" y="520" name="inst_378C80AD" locked="0" code="comandoCiclos = 20;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_blocoEncaixarFor" x="78" y="566" name="inst_69F4ED25" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_botaoExe" x="810" y="569" name="inst_6FC1D1FB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_botaoParar" x="954" y="572" name="inst_5423BD3F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deus" x="269" y="156" name="inst_E43B9E51" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bloco" x="95" y="197" name="inst_6E1D0DA9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_blocoEncaixar" x="25" y="412" name="inst_41ECF859" locked="0" code="comando = moverDIREITA;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_blocoEncaixar" x="28" y="492" name="inst_35173102" locked="0" code="comando = moverDIREITA;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_blocoEncaixar" x="28" y="367" name="inst_9D636F73" locked="0" code="comando = moverBAIXO;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_blocoEncaixar" x="30" y="314" name="inst_A68A15C0" locked="0" code="comando = moverESQUERDA;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_blocoEncaixar" x="28" y="455" name="inst_DD28B2F7" locked="0" code="comando = moverBAIXO;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_blocoEncaixarFor" x="51" y="538" name="inst_378C80AD" locked="0" code="comandoCiclos = 20;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_blocoEncaixarFor" x="48" y="581" name="inst_69F4ED25" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_botaoExe" x="812" y="570" name="inst_6FC1D1FB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_botaoParar" x="952" y="570" name="inst_5423BD3F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_mouse" x="78" y="110" name="inst_84FB08B8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_BotaoOpcoes" x="1184" y="3" name="inst_C6FCE673" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_objetivos" x="440" y="160" name="inst_BFE0615A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_objetivos" x="640" y="360" name="inst_BFE0615A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ativaObjetivos" x="904" y="688" name="inst_84B26BD0" locked="0" code="" scaleX="8.8100004196167" scaleY="2.03125" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>

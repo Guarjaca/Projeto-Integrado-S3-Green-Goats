@@ -320,6 +320,7 @@ if(room == Room_Fase1){
             break;
         
     }
+    draw_text(x + 60, y - 10, displayComando);
     
 }else if(room == Room_Fase2){
     image_index = comando;

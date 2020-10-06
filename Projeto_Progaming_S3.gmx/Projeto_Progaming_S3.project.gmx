@@ -73,6 +73,7 @@
       <sprite>sprites\spr_BotaoVoltar</sprite>
       <sprite>sprites\spr_deus</sprite>
       <sprite>sprites\spr_bolinha</sprite>
+      <sprite>sprites\spr_espCiclos</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -146,6 +147,7 @@
       <object>objects\obj_telaVisualizacao</object>
       <object>objects\obj_areaProibida</object>
     </objects>
+    <object>objects\obj_tutorial</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\Room_MenuPrincipal</room>
