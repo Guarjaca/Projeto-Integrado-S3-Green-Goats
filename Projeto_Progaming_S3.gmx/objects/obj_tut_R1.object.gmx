@@ -106,8 +106,7 @@ if(image_index == 2 &amp;&amp; sprite_index == spr_tut_R1){
         instance_create(748, 597, obj_naoTut);
     }
     obj_proximo.image_index = 2;
-}
-else{
+}else{
     if(instance_exists(obj_simTut)){
         instance_destroy(obj_simTut);
     }
@@ -123,18 +122,12 @@ if(image_index &lt;= 19 &amp;&amp; 7&lt;= image_index){//Animar o boneco pulando
     }
 }
 
-if(image_index == 22 &amp;&amp; !instance_exists(obj_gira)){//Ao chegar no frame com a animação de girar
+if( (image_index == 22 &amp;&amp; !instance_exists(obj_gira)) || (sprite_index==spr_tut_R1_Sim &amp;&amp; image_index==0 &amp;&amp; !instance_exists(obj_gira)) ){//Ao chegar no frame com a animação de girar
     instance_create(580,320,obj_gira);
-}else if(instance_exists(obj_gira) &amp;&amp; image_index &gt; 23){
+}else if( (instance_exists(obj_gira) &amp;&amp; image_index &gt; 23) || (instance_exists(obj_gira) &amp;&amp; image_index &gt; 0 &amp;&amp; sprite_index==spr_tut_R1_Sim) ){
     instance_destroy(obj_gira);
 }
-/*
-if(image_index &lt;= 15 &amp;&amp; 3&lt;= image_index){
-  if(alarm[1]&lt;0){
-    alarm[1] = 15;
-  }
-}
-*/
+
 if(image_index == 26 &amp;&amp; !instance_exists(obj_gira2)){//Segunda animação de girar
     instance_create(room_width/2 - 250, room_height/2 - 100, obj_gira2);
     obj_proximo.image_index = 2;

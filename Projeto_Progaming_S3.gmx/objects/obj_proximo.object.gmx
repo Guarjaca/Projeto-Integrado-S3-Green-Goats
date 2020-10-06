@@ -139,6 +139,13 @@ if (instance_exists(obj_pularTut)==false &amp;&amp; image_index != 2){
             }
             */
         }
+    }else if(instance_exists(obj_tut_R3)){
+        with(obj_tut_R3){
+            if(image_index == (image_number-1)){
+                room_goto(Room_Selecao);
+            }
+            image_index +=1;
+        }
     }
 }
 </string>

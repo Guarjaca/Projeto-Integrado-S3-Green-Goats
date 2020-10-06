@@ -84,10 +84,11 @@ if (instance_exists(obj_pularTut)==false){
           <argument>
             <kind>1</kind>
             <string>if (instance_exists(obj_pularTut)==false){
-instance_create(0,0,obj_pularTut);
-instance_create(704,470,obj_sim);
-instance_create(846,470,obj_nao);
-image_index = 0;
+    instance_create(0,0,obj_pularTut);
+    instance_create(704,470,obj_sim);
+    instance_create(846,470,obj_nao);
+    image_index = 0;
+    audio_play_sound(sound_pularTutorial, 1, false);
 }
 
 </string>
