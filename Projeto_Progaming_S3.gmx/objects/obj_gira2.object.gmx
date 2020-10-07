@@ -84,6 +84,7 @@ draw_sprite(spr_giraNum2,0,x,y-70);
 draw_set_font(font_cilos);
 draw_set_color(c_black);
 draw_text(x - 8, y-88, ciclos);
+obj_proximo.image_index = 2;
 </string>
           </argument>
         </arguments>

@@ -3,7 +3,7 @@
   <spriteName>spr_BotaoSelecao_2</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>1</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -48,14 +48,17 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (position_meeting(mouse_x, mouse_y, self)){
-    image_index = 1;
-    window_set_cursor(cr_drag);
-}
-
-else{
-    image_index = 0;
-    window_set_cursor(cr_default);
+            <string>
+if(!instance_exists(obj_confirmaTut)){
+    if (position_meeting(mouse_x, mouse_y, self)){
+        image_index = 1;
+        window_set_cursor(cr_drag);
+    }
+    
+    else{
+        image_index = 0;
+        window_set_cursor(cr_default);
+    }
 }
 </string>
           </argument>
@@ -79,7 +82,18 @@ else{
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>room_goto(Room_Fase2);
+            <string>///Mudar a fase
+
+if(fezTutorial == true){
+    audio_play_sound(sound_Jogar, 1, false);
+    room_goto(Room_Fase2);
+}else{
+    if(!instance_exists(obj_confirmaTut)){
+        instance_create(0, 0, obj_confirmaTut);
+        instance_create(704, 470, obj_simConfirmaTut);
+        instance_create(846, 470, obj_naoConfirmaTut);
+    }
+}
 </string>
           </argument>
         </arguments>

@@ -294,7 +294,9 @@ draw_set_colour(c_black);
 var displayComando = " ";
 
 if(room == Room_Fase1){
-    
+    sprite_index = spr_blocoEncaixar2;
+    image_index = comando;
+    /*
     switch (comando){
         case NADA:
             //draw_text(x, y, "Nada");
@@ -321,8 +323,9 @@ if(room == Room_Fase1){
         
     }
     draw_text(x + 60, y - 10, displayComando);
-    
+    */
 }else if(room == Room_Fase2){
+    sprite_index = spr_blocoEncaixar;
     image_index = comando;
     /*
     switch(comando){

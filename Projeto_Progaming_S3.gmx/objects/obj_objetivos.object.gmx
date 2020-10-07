@@ -32,7 +32,14 @@ y = room_height/2;
 if (room == Room_Fase2){
     sprite_index = spr_objetivos2;
     instance_create(x, y + 303, obj_botaoObjetivos);
-}//628 663 / 640 360 / -12 303
+    //628 663 / 640 360 / -12 303
+}else if(room == Room_Fase1){
+    sprite_index = spr_objetivos3;
+    botao = instance_create(x, y + 303, obj_botaoObjetivos);
+    with(botao){
+        sprite_index = spr_botaoObjetivos2;
+    }
+}
 
 
 </string>
@@ -111,13 +118,15 @@ if(position_meeting(mouse_x, mouse_y, self)){
 
 draw_self();
 
-if(room == Room_Fase1){
+if(room == Room_Fase1){/*
     xTexto = x - sprite_width/2;
     yTexto = y - sprite_height/2;
     draw_set_colour(c_black);
     draw_text_ext(xTexto + 50, yTexto + 50, "Objetivos:", 24, 300);
     draw_text_ext(xTexto + 50, yTexto + 80, "Fazer a bolinha preta pegar a bolinha vermelha e chegar na amarela", 10, 300);
     draw_text_ext(xTexto + 50, yTexto + 120, "Dica: A amarela está a 10 passos para baixo e para a direita", 10, 300);
+    */
+    sprite_index = spr_objetivos3;
 }else if(room == Room_Fase2){
     sprite_index = spr_objetivos2;
 }

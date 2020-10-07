@@ -68,12 +68,12 @@ if (instance_exists(obj_pularTut)==false){
 }
 
 if(instance_exists(obj_tut_R1)){
-    if(obj_tut_R1.sprite_index == spr_tut_R1 &amp;&amp; obj_tut_R1.image_index &gt;= 42){
-        show_debug_message("obj_proximo: entrei no if");
-        if( (obj_tut_R1.image_index &gt;= 42 &amp;&amp; obj_tut_R1.image_index&lt;=43) || (obj_tut_R1.image_index &gt;= 45 &amp;&amp; obj_tut_R1.image_index &lt;= 51) || (obj_tut_R1.image_index&gt;=55 &amp;&amp; obj_tut_R1.image_index&lt;=57) ){
+    if(obj_tut_R1.sprite_index == spr_tut_R1 &amp;&amp; obj_tut_R1.image_index &gt;= 41){
+        //show_debug_message("obj_proximo: entrei no if");
+        if( (obj_tut_R1.image_index &gt;= 41 &amp;&amp; obj_tut_R1.image_index&lt;=42) || (obj_tut_R1.image_index &gt;= 44 &amp;&amp; obj_tut_R1.image_index &lt;= 50) || (obj_tut_R1.image_index&gt;=54 &amp;&amp; obj_tut_R1.image_index&lt;=56) ){
             x = 1070 - sprite_width/2;
             y = 620 - sprite_height/2;
-        }else if( (obj_tut_R1.image_index == 44) || (obj_tut_R1.image_index &gt;= 52 &amp;&amp; obj_tut_R1.image_index &lt;= 54) ){
+        }else if( (obj_tut_R1.image_index == 43) || (obj_tut_R1.image_index &gt;= 51 &amp;&amp; obj_tut_R1.image_index &lt;= 53) ){
             x = 1070 - sprite_width/2;
             y = 488 - sprite_height/2;
         }
@@ -122,7 +122,11 @@ if (instance_exists(obj_pularTut)==false &amp;&amp; image_index != 2){
         }
     }else if(instance_exists(obj_tut_R2)){
         with(obj_tut_R2){
-            image_index += 1;
+            if(image_index == image_number - 1){
+                room_goto(Room_Selecao);
+            }else{
+                image_index += 1;
+            }
             /*
             if(sprite_index == spr_tut_R1){
                 if(image_index == (image_number-1)){
@@ -146,6 +150,9 @@ if (instance_exists(obj_pularTut)==false &amp;&amp; image_index != 2){
             }
             image_index +=1;
         }
+    }
+    if(!audio_is_playing(sound_confirma2)){
+        audio_play_sound(sound_confirma2, 1, false);
     }
 }
 </string>

@@ -83,6 +83,7 @@ else{
             <kind>1</kind>
             <string>///Voltar para a tela de seleção
 
+audio_play_sound(sound_pularTutorial, 1, false);
 room_goto(Room_Selecao);
 </string>
           </argument>

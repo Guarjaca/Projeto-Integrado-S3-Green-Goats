@@ -48,14 +48,17 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (position_meeting(mouse_x, mouse_y, self)){
-    image_index = 1;
-    window_set_cursor(cr_drag);
-}
-
-else{
-    image_index = 0;
-    window_set_cursor(cr_default);
+            <string>
+if(!instance_exists(obj_confirmarSel) &amp;&amp; !instance_exists(obj_confirmaPular)){
+    if (position_meeting(mouse_x, mouse_y, self)){
+        image_index = 1;
+        window_set_cursor(cr_drag);
+    }
+    
+    else{
+        image_index = 0;
+        window_set_cursor(cr_default);
+    }
 }
 </string>
           </argument>
@@ -80,7 +83,13 @@ else{
           <argument>
             <kind>1</kind>
             <string>///Tela de conluir
+if(!instance_exists(obj_confirmaPular)){
+    instance_create(0, 0, obj_confirmaPular);
+    instance_create(704, 470, obj_simConfirmaPular);
+    instance_create(846, 470, obj_naoConfirmaPular);
+}
 
+/*
 instance_create(0,0,obj_concluir);
 instance_create(475,584,obj_BotaoConcluir);
 instance_destroy(obj_MenuOpcoes);
@@ -88,6 +97,7 @@ instance_destroy(obj_Opcao1);
 instance_destroy(obj_Opcao2);
 instance_destroy(obj_Opcao3);
 instance_destroy(obj_Opcao4);
+*/
 </string>
           </argument>
         </arguments>

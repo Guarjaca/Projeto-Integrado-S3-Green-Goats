@@ -79,7 +79,12 @@ if(position_meeting(mouse_x, mouse_y, self)){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_destroy(obj_objetivos);
+            <string>///Fechar
+
+if(!audio_is_playing(sound_confirma2)){
+    audio_play_sound(sound_confirma2, 1, false);
+}
+instance_destroy(obj_objetivos);
 </string>
           </argument>
         </arguments>

@@ -77,7 +77,11 @@ else{
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_destroy(obj_pularTut);
+            <string>
+if(!audio_is_playing(sound_nega)){
+    audio_play_sound(sound_nega, 1, false);
+}
+instance_destroy(obj_pularTut);
 instance_destroy(obj_sim);
 instance_destroy(obj_nao);
 </string>

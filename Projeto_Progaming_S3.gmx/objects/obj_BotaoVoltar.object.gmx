@@ -79,7 +79,9 @@ else{
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>room_goto(Room_MenuPrincipal);
+            <string>///VOltar para o Menu Principal
+audio_play_sound(sound_nega, 1, false);
+room_goto(Room_MenuPrincipal);
 </string>
           </argument>
         </arguments>

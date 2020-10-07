@@ -79,10 +79,12 @@ if(position_meeting(mouse_x, mouse_y, self)){
             <kind>1</kind>
             <string>///Executar no clique
 if (instance_exists(obj_MenuOpcoes)==false &amp;&amp; instance_exists(obj_concluir)==false  &amp;&amp; instance_exists(obj_objetivos)==false){
-    obj_deus.executar = true;
-    if(!audio_is_playing(sound_executar)){
+    if(!audio_is_playing(sound_nega) &amp;&amp; obj_deus.executar == true){
+        audio_play_sound(sound_nega, 1, false);
+    }else if(!audio_is_playing(sound_executar)){
         audio_play_sound(sound_executar, 1, false);
     }
+    obj_deus.executar = true;
 }
 </string>
           </argument>

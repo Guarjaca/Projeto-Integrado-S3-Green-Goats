@@ -27,8 +27,11 @@
             <kind>1</kind>
             <string>///Variáveis para o Desenho
 
-xInicial = 1005;
-yInicial = 225;
+movimentoHor = 50;
+movimentoVer = 48;
+
+xInicial = 880;
+yInicial = 169;
 
 xAtual = xInicial;
 yAtual = yInicial;
@@ -41,13 +44,19 @@ corCirculoAtual = corCirculoInicial;
 corPintado = c_red;
 pintado = false;
 
-xPintado = 1055;
-yPintado = 275;
+//xPintado = 1030;
+//yPintado = 310;
+
+xPintado = xInicial + 3*movimentoHor;
+yPintado = yInicial + 3*movimentoVer;
 
 //Vencer
 
-xVencer = 1105;
-yVencer = 325;
+//xVencer = 1179;
+//yVencer = 451;
+
+xVencer = xInicial + 6*movimentoHor;
+yVencer = yInicial + 6*movimentoVer;
 </string>
           </argument>
         </arguments>
@@ -188,6 +197,55 @@ ladoDeus.blocoPai = self;
         </arguments>
       </action>
     </event>
+    <event eventtype="2" enumb="4">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Alarme de espera para a Fase do Tutorial
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="3">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Alarme para a animação final do tutorial
+
+instance_create(0,0,obj_concluir);
+instance_create(475,584,obj_BotaoConcluir);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="2" enumb="2">
       <action>
         <libid>1</libid>
@@ -303,14 +361,14 @@ if(perder == true &amp;&amp; terminou == false &amp;&amp; alarm[2]&lt;0){
                 sprite_index = spr_animDerrotaFermento;
                 image_speed = 1;
             }
-            alarm[2] = 3*room_speed;
+            alarm[2] = 2*room_speed;
             break;
         case FARINHA:
             with(obj_visualizador){
                 sprite_index = spr_animDerrotaFarinha;
                 image_speed = 1;
             }
-            alarm[2] = 3*room_speed;
+            alarm[2] = 2*room_speed;
             break;
     }
     
@@ -393,59 +451,67 @@ yAtual = yInicial;
 
 if(room == Room_Fase1){
 
-draw_self();
-draw_set_colour(corCirculoAtual);
-draw_circle(xAtual, yAtual, 10, false);
-
-if(pintado == false){
-    draw_set_colour(corPintado);
-    draw_circle(xPintado, yPintado, 5, false);
-}
-if(vencer == false){
-    draw_set_colour(c_yellow);
-    draw_circle(xVencer, yVencer, 5, false);
-}
-
-//================================
-
-//Mudar a cor do círculo
-if (xAtual == xPintado &amp;&amp; yAtual == yPintado){
-    pintado = true;
-    corCirculoAtual = corPintado;
-}
-
-if(pintado == true){
-    if (xAtual == xVencer &amp;&amp; yAtual == yVencer){
-        vencer = true;
-    }
-}
-
-
-//================================
-//Rodar os comandos
-if(executar == true){
-    if(ciclos&lt;=0){//Parar de executar ao acabar os ciclos
-        //executar = false;
-    }else{
+    draw_self();
+    draw_sprite(spr_grid, 0, 754, 97);
+    //draw_set_colour(corCirculoAtual);
+    //draw_circle(xAtual, yAtual, 10, false);
+    draw_sprite(spr_cachorro, pintado, xAtual, yAtual);
     
-        if (comandoAtual &lt; array_length_1d(listaComandos) ){
-            scr_executar2(listaComandos, comandoAtual);
-            //show_debug_message(string(listaComandos[comandoAtual].comandoConector));
-            comandoAtual++;
-        }else{//Voltar para o começo do laço
-            comandoAtual = 0;
-            ciclos--;
+    if(pintado == false){//Enquanto não foi pegue desenhe a bolinha
+        //draw_set_colour(corPintado);
+        //draw_circle(xPintado, yPintado, 5, false);
+        draw_sprite(spr_bolinha, 0, xPintado, yPintado);
+    }/*
+    if(vencer == false){
+        draw_set_colour(c_yellow);
+        draw_circle(xVencer, yVencer, 5, false);
+    }
+    */
+    draw_sprite(spr_pessoa, 0, xVencer, yVencer);
+    
+    //================================
+    
+    //Mudar a cor do círculo
+    if (xAtual == xPintado &amp;&amp; yAtual == yPintado){
+        pintado = true;
+        corCirculoAtual = corPintado;
+    }
+    
+    if(pintado == true){
+        if (xAtual == xVencer &amp;&amp; yAtual == yVencer){
+            vencer = true;
         }
     }
     
-}else{
-    ciclos = maxCiclos;
-}
-
-
-
-//show_debug_message("obj_Deus comandoAtual: " + string(xAtual));
-//show_debug_message("obj_Deus xAtual: " + string(xAtual));
+    
+    //================================
+    //Rodar os comandos
+    if(executar == true &amp;&amp; alarm[4]&lt;0){
+        if(ciclos&lt;=0){//Parar de executar ao acabar os ciclos
+            if(vencer == false){
+                perder = true;
+            }
+            //executar = false;
+        }else{
+        
+            if (comandoAtual &lt; array_length_1d(listaComandos) ){
+                scr_executar2(listaComandos, comandoAtual);
+                //show_debug_message(string(listaComandos[comandoAtual].comandoConector));
+                comandoAtual++;
+            }else{//Voltar para o começo do laço
+                comandoAtual = 0;
+                ciclos--;
+            }
+        }
+        
+    }else if(executar == false){
+        ciclos = maxCiclos;
+    }
+    
+    
+    
+    //show_debug_message("obj_Deus comandoAtual: " + string(xAtual));
+    //show_debug_message("obj_Deus xAtual: " + string(xAtual));
 
 
 }
@@ -474,8 +540,16 @@ if(executar == true){
 switch(room){
     case Room_Fase1:
         if(vencer == true &amp;&amp; !instance_exists(obj_concluir)){
-            instance_create(0,0,obj_concluir);
-            instance_create(475,584,obj_BotaoConcluir);
+            if(alarm[3]&lt;0){
+                if (!instance_exists(obj_animConc)){
+                    instance_create(754, 97, obj_animConc);
+                }
+                alarm[3] = 80;
+            }
+        }else if(perder == true){
+            if (!instance_exists(obj_animConc)){
+                    instance_create(754, 97, obj_animConc);
+            }
         }
         break;
     default:
@@ -581,14 +655,14 @@ if (room == Room_Fase2){
                     sprite_index = spr_animDerrotaBaterMuito;
                     image_speed = 1;
                 }
-                alarm[2] = 3*room_speed;
+                alarm[2] = 2*room_speed;
                 break;
             case BATEU_POUCO:
                 with(obj_visualizador){
                     sprite_index = spr_animDerrotaBaterPouco;
                     image_speed = 1;
                 }
-                alarm[2] = 3*room_speed;
+                alarm[2] = 2*room_speed;
                 break;
         }
         
@@ -617,10 +691,19 @@ if (room == Room_Fase2){
             <string>///Desenhar os ciclos
 
 if(room == Room_Fase2){
+    sprite_index = spr_blocoDicas;
     with(obj_visualizador){
-        
-        draw_text(x + 10, y + 10, "Ciclos:" + string(maxCiclos - ciclos));
+        draw_set_font(font1);
+        draw_set_colour(c_black);
+        draw_text(x + 10, y + 4, "Ciclos:" + string(maxCiclos - ciclos));
     }
+}else if(room == Room_Fase1){
+    sprite_index = spr_blocoDicas2;
+    draw_set_font(font1);
+    draw_set_colour(c_black);
+    draw_sprite(spr_espCiclos, 0, 754, 97);
+    draw_text(754, 97, "Ciclos:" + string(maxCiclos - ciclos));
+    
 }
 </string>
           </argument>

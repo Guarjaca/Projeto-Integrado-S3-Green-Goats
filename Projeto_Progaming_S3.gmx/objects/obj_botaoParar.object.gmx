@@ -80,36 +80,44 @@ if(position_meeting(mouse_x, mouse_y, self)){
             <string>///Parar de executar ao clicar
 
 if (instance_exists(obj_MenuOpcoes)==false &amp;&amp; instance_exists(obj_concluir)==false  &amp;&amp; instance_exists(obj_objetivos)==false){
-
-obj_deus.executar = false;
-perder = false;
-
-if(!audio_is_playing(sound_parar)){
-    audio_play_sound(sound_parar, 1, false);
-}
-
-switch(room){
-    case Room_Fase1:
-        with (obj_deus){
-            xAtual = xInicial;
-            yAtual = yInicial;
-        }
-        break;
-    case Room_Fase2:
-        with(obj_deus){
-            fermento = false;
-            farinha = false;
-            batidas = 0;
-            alarm[2] = -1;
-            terminou = false;
-            
-        }    
     
-        with(obj_visualizador){
-            sprite_index = spr_animNeutro;
-            image_speed = 0;
-        }
-}
+    obj_deus.executar = false;
+    perder = false;
+    
+    if(!audio_is_playing(sound_parar)){
+        audio_play_sound(sound_parar, 1, false);
+    }
+    
+    switch(room){
+        default:
+            break;
+        case Room_Fase1:
+            with (obj_deus){
+                xAtual = xInicial;
+                yAtual = yInicial;
+                pintado = false;
+                perder = false;
+                if (instance_exists(obj_animConc)){
+                    instance_destroy(obj_animConc);
+                }
+            }
+            break;
+        case Room_Fase2:
+            with(obj_deus){
+                fermento = false;
+                farinha = false;
+                batidas = 0;
+                alarm[2] = -1;
+                terminou = false;
+                
+            }    
+        
+            with(obj_visualizador){
+                sprite_index = spr_animNeutro;
+                image_speed = 0;
+            }
+            break;
+    }
 
 }
 </string>

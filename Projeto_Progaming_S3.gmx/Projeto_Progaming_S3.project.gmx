@@ -8,6 +8,7 @@
     <sound>sound\sound_Jogar</sound>
     <sound>sound\sound_parar</sound>
     <sound>sound\sound_executar</sound>
+    <sound>sound\sound_confirma2</sound>
     <sound>sound\sound_confirma</sound>
     <sound>sound\sound_nega</sound>
     <sound>sound\sound_pularTutorial</sound>
@@ -19,8 +20,10 @@
       <sprite>sprites\spr_barraFinal</sprite>
       <sprite>sprites\spr_bloco</sprite>
       <sprite>sprites\spr_lado</sprite>
+      <sprite>sprites\spr_blocoEncaixar2</sprite>
       <sprite>sprites\spr_blocoEncaixar</sprite>
       <sprite>sprites\spr_blocoEncaixarFor</sprite>
+      <sprite>sprites\spr_blocoDicas2</sprite>
       <sprite>sprites\spr_blocoDicas</sprite>
       <sprite>sprites\spr_bloco2</sprite>
       <sprite>sprites\spr_lado2</sprite>
@@ -36,6 +39,7 @@
       <sprite>sprites\spr_MenuBotao_1</sprite>
       <sprite>sprites\spr_MenuBotao_2</sprite>
       <sprite>sprites\spr_MenuBotao_3</sprite>
+      <sprite>sprites\spr_botaoSom</sprite>
       <sprite>sprites\spr_MenuBotao_4</sprite>
     </sprites>
     <sprites name="Selecao de Fases">
@@ -66,23 +70,35 @@
         <sprite>sprites\spr_animDerrotaBaterPouco</sprite>
         <sprite>sprites\spr_animDerrotaBaterPouco2</sprite>
         <sprite>sprites\spr_animFarinha</sprite>
+        <sprite>sprites\spr_animPetDog</sprite>
+        <sprite>sprites\spr_animDerrotaTut</sprite>
       </sprites>
       <sprite>sprites\spr</sprite>
       <sprite>sprites\spr_botaoParar</sprite>
       <sprite>sprites\spr_botaoExe</sprite>
+      <sprite>sprites\spr_objetivos3</sprite>
       <sprite>sprites\spr_objetivos</sprite>
       <sprite>sprites\spr_botaoObjetivos</sprite>
+      <sprite>sprites\spr_botaoObjetivos2</sprite>
       <sprite>sprites\spr_ativaObjetivo</sprite>
+      <sprite>sprites\spr_ativaObjetivo2</sprite>
       <sprite>sprites\spr_objetivos2</sprite>
       <sprite>sprites\spr_colisor</sprite>
       <sprite>sprites\spr_BotaoConcluir</sprite>
       <sprite>sprites\spr_areaProibida</sprite>
+      <sprite>sprites\spr_concluirTut</sprite>
+      <sprite>sprites\spr_concluirFase</sprite>
       <sprite>sprites\spr_Concluir</sprite>
       <sprite>sprites\spr_mouse</sprite>
       <sprite>sprites\spr_BotaoVoltar</sprite>
       <sprite>sprites\spr_deus</sprite>
-      <sprite>sprites\spr_bolinha</sprite>
       <sprite>sprites\spr_espCiclos</sprite>
+      <sprite>sprites\spr_pessoa</sprite>
+      <sprite>sprites\spr_bolinha</sprite>
+      <sprite>sprites\spr_cachorro</sprite>
+      <sprite>sprites\spr_confirmaSel</sprite>
+      <sprite>sprites\spr_confirmaPular</sprite>
+      <sprite>sprites\spr_confirmaTut</sprite>
     </sprites>
     <sprites name="Tutorial">
       <sprite>sprites\spr_proximo</sprite>
@@ -106,6 +122,7 @@
         <sprite>sprites\spr_giraNum2</sprite>
         <sprite>sprites\spr_giraRepetir2</sprite>
       </sprites>
+      <sprite>sprites\spr_grid</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -114,6 +131,7 @@
     <background>background\Tela_Selecao_de_Fases</background>
     <background>background\Tela_Tutorial</background>
     <background>background\bg_TelaFase1</background>
+    <background>background\Tela_FaseTutorial</background>
   </backgrounds>
   <paths name="paths">
     <path>paths\path0</path>
@@ -147,6 +165,7 @@
       <object>objects\obj_MenuBotao_2</object>
       <object>objects\obj_MenuBotao_3</object>
       <object>objects\obj_MenuBotao_4</object>
+      <object>objects\obj_botaoSom</object>
     </objects>
     <objects name="Selecao de Fases">
       <object>objects\obj_BotaoSelecao_1</object>
@@ -161,6 +180,7 @@
       <object>objects\obj_botaoObjetivos</object>
       <object>objects\obj_objetivos</object>
       <object>objects\obj_ativaObjetivos</object>
+      <object>objects\obj_ativaObjetivosTut</object>
       <object>objects\obj_mouse</object>
       <object>objects\obj_BotaoVoltar</object>
       <object>objects\obj_BotaoConcluir</object>
@@ -198,6 +218,19 @@
       <object>objects\obj_nao</object>
       <object>objects\obj_gira</object>
       <object>objects\obj_gira2</object>
+      <object>objects\object58</object>
+      <object>objects\obj_animConc</object>
+    </objects>
+    <objects name="Confirmações">
+      <object>objects\obj_confirmaTut</object>
+      <object>objects\obj_simConfirmaTut</object>
+      <object>objects\obj_naoConfirmaTut</object>
+      <object>objects\obj_confirmaPular</object>
+      <object>objects\obj_simConfirmaPular</object>
+      <object>objects\obj_naoConfirmaPular</object>
+      <object>objects\obj_naoConfirmaSel</object>
+      <object>objects\obj_simConfirmaSel</object>
+      <object>objects\obj_confirmarSel</object>
     </objects>
   </objects>
   <rooms name="rooms">

@@ -31,7 +31,7 @@
     <yoffset>0</yoffset>
   </makerSettings>
   <backgrounds>
-    <background visible="-1" foreground="0" name="bg_TelaFase1" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
+    <background visible="-1" foreground="0" name="Tela_FaseTutorial" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -58,14 +58,15 @@
     <instance objName="obj_blocoEncaixar" x="28" y="367" name="inst_9D636F73" locked="0" code="comando = moverBAIXO;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_blocoEncaixar" x="30" y="314" name="inst_A68A15C0" locked="0" code="comando = moverESQUERDA;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_blocoEncaixar" x="28" y="455" name="inst_DD28B2F7" locked="0" code="comando = moverBAIXO;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_blocoEncaixarFor" x="51" y="538" name="inst_378C80AD" locked="0" code="comandoCiclos = 20;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_blocoEncaixarFor" x="48" y="581" name="inst_69F4ED25" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_blocoEncaixarFor" x="51" y="538" name="inst_378C80AD" locked="0" code="comandoCiclos = 4;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_blocoEncaixarFor" x="48" y="581" name="inst_69F4ED25" locked="0" code="comandoCiclos = 6;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_botaoExe" x="812" y="570" name="inst_6FC1D1FB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_botaoParar" x="952" y="570" name="inst_5423BD3F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_mouse" x="78" y="110" name="inst_84FB08B8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_BotaoOpcoes" x="1184" y="3" name="inst_C6FCE673" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_objetivos" x="640" y="360" name="inst_BFE0615A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_ativaObjetivos" x="753" y="616" name="inst_0310F3F8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ativaObjetivosTut" x="759" y="611" name="inst_3C55877E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_blocoEncaixarFor" x="62" y="630" name="inst_3FF7297E" locked="0" code="comandoCiclos = 5;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

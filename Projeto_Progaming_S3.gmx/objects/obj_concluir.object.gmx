@@ -85,6 +85,7 @@ y = 0;
             <string>///Desenhar a resposta
 
 draw_self();
+if(sprite_index == spr_Concluir){
 /*
 xA = room_width/2 - 200;
 yA = room_height/2 - 120;
@@ -129,7 +130,7 @@ if (instance_exists(obj_blocoSe)){
 */
 if (instance_exists(obj_blocoEncaixarSe)){
     if (obj_blocoEncaixarSe.ligado == true){
-        obj_blocoEncaixarSe.depth = -6;
+        obj_blocoEncaixarSe.depth = -7;
     }
 }
 if (instance_exists(obj_seConector)){
@@ -137,7 +138,7 @@ if (instance_exists(obj_seConector)){
 }
 
 
-
+}
 obj_bloco.x = room_width/2 - 240;
 obj_bloco.y = room_height/2 - 80;
 
@@ -164,6 +165,7 @@ obj_bloco.y = room_height/2 - 80;
             <kind>1</kind>
             <string>///Desenhar o texto do código
 
+if(sprite_index == spr_Concluir){
 draw_set_font(font1);
 draw_set_colour($362F29);
 
@@ -215,6 +217,8 @@ if(room == Room_Fase2){
     }
     
     draw_text(xTexto, yTexto + mEsp, "} ");
+}
+
 }
 </string>
           </argument>
