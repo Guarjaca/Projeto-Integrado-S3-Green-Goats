@@ -74,6 +74,9 @@ image_speed = 0;
           <argument>
             <kind>1</kind>
             <string>image_index++;
+if(image_index%2==0){
+        audio_play_sound(sound_confirma2, 1, false);
+}
 </string>
           </argument>
         </arguments>
