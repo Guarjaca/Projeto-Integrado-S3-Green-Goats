@@ -11,6 +11,6 @@
   -Bruno Eskinazi (Guarjaca) <br>
   -Eduarda Tavares (D00dinka)</p>
 
-<a href="https://drive.google.com/drive/folders/1X0EZq0qilENbWgePb7Sr6Snv6jQ-BaZ-" target="_blank">Baixe o executável do projeto!</a>
+<a href="https://drive.google.com/drive/folders/1X0EZq0qilENbWgePb7Sr6Snv6jQ-BaZ-?usp=sharing" target="_blank">Baixe o executável do projeto!</a>
 
 <p>O Windows Defender pode achar que o arquivo é malicioso, mas é só clicar em "Executar mesmo assim" que dá para abrir o executável.</p>
