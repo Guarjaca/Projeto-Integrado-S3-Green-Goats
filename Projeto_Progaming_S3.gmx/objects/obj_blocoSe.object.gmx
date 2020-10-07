@@ -186,6 +186,11 @@ if (pego == true){
     
 }else{
     if (blocoLigado != noone){
+        if(alocado == false){
+            if(!audio_is_playing(sound_confirma)){
+                audio_play_sound(sound_confirma, 1, false);
+            }
+        }
         ligado = true;
         alocado = true;
     }else{

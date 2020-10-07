@@ -115,6 +115,9 @@ if(pego == true){//Se foi pego pelomouse
     
     
     if(ligado == true){//Se está ligado a alguém -&gt; desligue
+        if(!audio_is_playing(sound_nega)){
+            audio_play_sound(sound_nega, 1, false);
+        }
         blocoLigado.conectado = false;
         ligado = false;
         //show_debug_message("obj_blocoEncaixar diz: estou no if");
@@ -122,6 +125,11 @@ if(pego == true){//Se foi pego pelomouse
     
 }else{
     if(blocoLigado != noone){//Está ligado a alguém
+        if(ligado == false){
+            if(!audio_is_playing(sound_confirma)){
+                audio_play_sound(sound_confirma, 1, false);
+            }
+        }
         ligado = true;
         ordem = blocoLigado.ordem;
     }else{

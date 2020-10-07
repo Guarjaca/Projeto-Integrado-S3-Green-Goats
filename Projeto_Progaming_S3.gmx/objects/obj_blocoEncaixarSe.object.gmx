@@ -114,6 +114,9 @@ if(pego == true){
     path_change_point(caminhoVolta, 1, x, y, 100);
     
     if(ligado == true){
+        if(!audio_is_playing(sound_nega)){
+            audio_play_sound(sound_nega, 1, false);
+        }
         blocoLigado.conectado = false;
         ligado = false;
     }
@@ -121,6 +124,11 @@ if(pego == true){
 }else {
     //Realizar a ligação
     if(blocoLigado != noone){
+        if(ligado == false){
+            if(!audio_is_playing(sound_confirma)){
+                audio_play_sound(sound_confirma, 1, false);
+            }
+        }
         ligado = true;
     }else{//Desligar o bloco
         ligado = false;

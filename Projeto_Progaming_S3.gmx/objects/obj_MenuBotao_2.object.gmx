@@ -79,7 +79,8 @@ else{
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>room_goto(Room_Tutorial);
+            <string>audio_play_sound(sound_Jogar, 1, false);
+room_goto(Room_Tutorial);
 </string>
           </argument>
         </arguments>

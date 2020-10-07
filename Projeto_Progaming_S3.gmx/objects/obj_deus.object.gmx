@@ -702,7 +702,7 @@ if(room == Room_Fase2){
     draw_set_font(font1);
     draw_set_colour(c_black);
     draw_sprite(spr_espCiclos, 0, 754, 97);
-    draw_text(754, 97, "Ciclos:" + string(maxCiclos - ciclos));
+    draw_text(754 + 10, 97, "Ciclos:" + string(maxCiclos - ciclos));
     
 }
 </string>

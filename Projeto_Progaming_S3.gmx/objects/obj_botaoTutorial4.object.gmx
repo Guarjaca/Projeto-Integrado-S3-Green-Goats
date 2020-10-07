@@ -79,7 +79,8 @@ else{
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (instance_exists(obj_pularTut)==false){
+            <string>audio_play_sound(sound_Jogar, 1, false);
+if (instance_exists(obj_pularTut)==false){
     room_goto(Room_Fase1);
 }
 </string>

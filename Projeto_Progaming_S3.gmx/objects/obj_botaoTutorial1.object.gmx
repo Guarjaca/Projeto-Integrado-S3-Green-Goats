@@ -82,7 +82,7 @@ else{
           <argument>
             <kind>1</kind>
             <string>///Iniciar a Rota 2
-
+audio_play_sound(sound_Jogar, 1, false);
 if (instance_exists(obj_pularTut)==false){
     instance_create(0, 0, obj_tut_R1);
     instance_destroy(obj_botaoTutorial1);

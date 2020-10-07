@@ -309,6 +309,11 @@ if (pego == true){
     path_change_point(caminhoVolta, 1, x, y, 100);
 }else{
     if (blocoLigado != noone){
+        if(alocado == false){
+            if(!audio_is_playing(sound_confirma)){
+                audio_play_sound(sound_confirma, 1, false);
+            }
+        }
         alocado = true;
     }else{
         alocado = false;
